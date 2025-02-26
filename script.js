@@ -18,3 +18,11 @@ document.querySelectorAll('.cta, .submit-btn').forEach(button => {
         button.style.transform = 'scale(1)';
     });
 });
+
+// Toggle mobile menu
+const menuIcon = document.querySelector('.menu-icon'); // Tu peux ajouter un icon de menu burger dans ton HTML
+const navLinks = document.querySelector('.nav-links');
+
+menuIcon.addEventListener('click', () => {
+    navLinks.classList.toggle('mobile');
+});
