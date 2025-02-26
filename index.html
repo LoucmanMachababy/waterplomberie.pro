@@ -123,31 +123,38 @@
         </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Contactez-nous</h2>
-            <div class="contact-info">
-                <div class="info-card">
-                    <h3>Informations de contact</h3>
-                    <p><strong>Hamza DJAFFER</strong></p>
-                    <p>Téléphone : +33 7 83 16 76 13</p>
-                    <p>Email : Watter.Plomberie@gmail.com</p>
-        
-                </div>
-                <form class="contact-form">
-                    <input type="text" placeholder="Nom" required>
-                    <input type="email" placeholder="Email" required>
-                    <textarea placeholder="Message"></textarea>
-                    <button type="submit" class="submit-btn">Envoyer</button>
-                </form>
+<!-- Contact -->
+<section id="contact" class="contact">
+    <div class="container">
+        <h2>Contactez-nous</h2>
+        <div class="contact-info">
+            <div class="info-card">
+                <h3>Informations de contact</h3>
+                <p><strong>Hamza DJAFFER</strong></p>
+                <p>Téléphone : +33 7 83 16 76 13</p>
+                <p>Email : Watter.Plomberie@gmail.com</p>
             </div>
+            <!-- Formulaire de contact avec champ fichier -->
+            <form action="mailto:watter.plomberie@gmail.com" method="POST" enctype="multipart/form-data" class="contact-form">
+                <input type="text" name="name" placeholder="Nom" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <textarea name="message" placeholder="Message" required></textarea>
+                
+                <!-- Nouveau champ de fichier avec le libellé "Photo du problème" -->
+                <label for="file-upload" class="file-label">Photo (facultatif)</label>
+                <input type="file" id="file-upload" name="file" accept="image/*, .pdf, .doc, .docx, .txt" class="file-input">
+
+                <button type="submit" class="submit-btn">Envoyer</button>
+            </form>
         </div>
-    </section>
+    </div>
+</section>
+
+
 
     <footer>
         <div class="container">
-            <p>&copy; 2023 Water Plomberie. Tous droits réservés.</p>
+            <p>&copy; 2025 Water Plomberie. Tous droits réservés.</p>
         </div>
     </footer>
 
