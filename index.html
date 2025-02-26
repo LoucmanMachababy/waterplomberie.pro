@@ -136,17 +136,23 @@
                 <p>Téléphone : +33 7 83 16 76 13</p>
                 <p>Email : Watter.Plomberie@gmail.com</p>
             </div>
-            <!-- Formulaire de contact avec champ fichier -->
-            <form action="mailto:watter.plomberie@gmail.com" method="POST" enctype="multipart/form-data" class="contact-form">
-                <input type="text" name="name" placeholder="Nom" required>
-                <input type="email" name="email" placeholder="Email" required>
-                <textarea name="message" placeholder="Message" required></textarea>
-                
-                <!-- Nouveau champ de fichier avec le libellé "Photo du problème" -->
-                <label for="file-upload" class="file-label">Photo (facultatif)</label>
-                <input type="file" id="file-upload" name="file" accept="image/*, .pdf, .doc, .docx, .txt" class="file-input">
 
-                <button type="submit" class="submit-btn">Envoyer</button>
+            <!-- Formulaire de contact avec Formspree -->
+            <form action="https://formspree.io/f/mldgyyky" method="POST" enctype="multipart/form-data">
+                <!-- Champ email -->
+                <label for="email">watter.plomberie@gmail.com</label>
+                <input type="email" id="email" name="email" placeholder="watter.plomberie@gmail.com" required>
+
+                <!-- Champ fichier pour photo du problème -->
+                <label for="upload">Photo du problème :</label>
+                <input type="file" id="upload" name="upload" required>
+
+                <!-- Message -->
+                <label for="message">Votre message :</label>
+                <textarea id="message" name="message" placeholder="Décrivez votre problème" required></textarea>
+
+                <!-- Bouton d'envoi -->
+                <button type="submit">Envoyer</button>
             </form>
         </div>
     </div>
