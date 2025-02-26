@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Plomberie</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="Images/logo.png" alt="Logo Water Plomberie" class="site-logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#avis">Avis clients</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home -->
+    <section id="home" class="home">
+        <div class="overlay"></div>
+        <div class="home-content">
+            <h1>Votre expert en plomberie</h1>
+            <p>Hamza DJAFFER - Service professionnel et rapide</p>
+            <p class="slogan">Une plomberie d'exception pour un confort inégalable</p>
+            <a href="#services"><button class="cta">Découvrez nos services</button></a>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Nos services</h2>
+            <div class="service-card">
+                <img src="Images/urgence-plomberie.jpg" alt="Urgence 24/7">
+                <h3>Urgence 24/7</h3>
+                <p>Intervention rapide jour et nuit pour tous vos besoins urgents.</p>
+                <a href="#contact"><button class="service-btn">Demander une intervention</button></a>
+            </div>
+            <div class="service-card">
+                <img src="Images/PLOMBERIESANIT.jpg" alt="Plomberie sanitaire">
+                <h3>Plomberie sanitaire</h3>
+                <p>Installation et entretien de robinetterie, WC, baignoires, douches, etc.</p>
+                <a href="#contact"><button class="service-btn">Demander une intervention</button></a>
+            </div>
+            <div class="service-card">
+                <img src="Images/chauffage.png" alt="Chauffage">
+                <h3>Chauffage</h3>
+                <p>Pose et maintenance de systèmes de chauffage, radiateurs, ballons d'eau chaude.</p>
+                <a href="#contact"><button class="service-btn">Demander une intervention</button></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Avant/Après -->
+    <section id="avant-apres" class="avant-apres">
+        <div class="container">
+            <h2>Avant/Après</h2>
+            <div class="gallery">
+                <div class="image-pair">
+                    <div class="image-container">
+                        <div class="image-wrapper">
+                            <img src="Images/salledebainavant.jpeg" alt="Avant Salle de bain" class="before">
+                            <img src="Images/service2.jpg" alt="Après Salle de bain" class="after">
+                        </div>
+                        <p>Après - Salle de bain rénovée</p>
+                    </div>
+                    <div class="image-container">
+                        <div class="image-wrapper">
+                            <img src="Images/AVANTTOILETTE.jpeg" alt="Avant Toilette" class="before">
+                            <img src="Images/aprestoilette.jpeg" alt="Après Toilette" class="after">
+                        </div>
+                        <p>Après - Toilette rénovée</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- À propos -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="Images/logo.png" alt="Hamza DJAFFER" class="profile-img">
+                </div>
+                <div class="about-text">
+                    <h3>Hamza DJAFFER - Votre expert en plomberie</h3>
+                    <p>
+                        Hamza DJAFFER, plombier certifié avec plus de 7 ans d'expérience. Spécialisé dans l'urgence, la plomberie sanitaire et le chauffage, je m'engage à offrir un service rapide et de qualité.
+                    </p>
+                    <ul class="skills-list">
+                        <li><strong>Urgence dépannage 24/7 :</strong> Intervention rapide jour et nuit.</li>
+                        <li><strong>Plomberie sanitaire :</strong> Installation et entretien de robinetterie, WC, baignoires, douches, etc.</li>
+                        <li><strong>Chauffage :</strong> Pose et maintenance de systèmes de chauffage, radiateurs, ballons d'eau chaude.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Avis clients -->
+    <section id="avis" class="avis">
+        <div class="container">
+            <h2>Avis clients</h2>
+            <div class="review">
+                <p>"Hamza a été incroyablement réactif lors de mon problème de fuite. Un vrai professionnel !"</p>
+                <div class="stars">★★★★★</div>
+                <span>- Mohamed BEN AMAR</span>
+            </div>
+            <div class="review">
+                <p>"Je recommande Water Plomberie. Leur service d'urgence m'a permis de régler une panne de chauffage en plein hiver."</p>
+                <div class="stars">★★★★★</div>
+                <span>- Lucas DELACROIX</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contactez-nous</h2>
+            <div class="contact-info">
+                <div class="info-card">
+                    <h3>Informations de contact</h3>
+                    <p><strong>Hamza DJAFFER</strong></p>
+                    <p>Téléphone : +33 6 12 34 56 78</p>
+                    <p>Email : contact@waterplomberie.fr</p>
+                    <p>Adresse : 123 Rue de la Plomberie, 74000 Annecy</p>
+                </div>
+                <form class="contact-form">
+                    <input type="text" placeholder="Nom" required>
+                    <input type="email" placeholder="Email" required>
+                    <textarea placeholder="Message"></textarea>
+                    <button type="submit" class="submit-btn">Envoyer</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Water Plomberie. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
