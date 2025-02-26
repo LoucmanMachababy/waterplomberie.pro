@@ -32,6 +32,72 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
+        form {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 1rem;
+            color: #333;
+        }
+
+        form input[type="email"],
+        form input[type="file"],
+        form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+            color: #333;
+            box-sizing: border-box;
+        }
+
+        /* Champ email et message avec un placeholder */
+        form input[type="email"]:focus,
+        form textarea:focus {
+            outline: none;
+            border-color: #0074D9;
+            box-shadow: 0 0 8px rgba(0, 116, 217, 0.2);
+        }
+
+        /* Style pour le bouton */
+        form button {
+            background-color: #0074D9;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 25px;
+            transition: background-color 0.3s ease;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-top: 1rem;
+            width: 100%;
+        }
+
+        /* Effet au survol du bouton */
+        form button:hover {
+            background-color: #005bb5;
+        }
+
+        /* Placeholder personnalisé */
+        form input::placeholder,
+        form textarea::placeholder {
+            color: #aaa;
+        }
+    </style>
+</head>
     </header>
 
     <!-- Home -->
