@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 // @ts-expect-error swiper types are not compatible with Next.js build
@@ -43,7 +42,7 @@ export default function Home() {
             transition={{ duration: 1.2, ease: "easeOut" }}
             className="absolute inset-0 w-full h-full z-0"
           >
-            <Image
+            <img
               src="/service2.jpg"
               alt="Salle de bain rénovée Hero"
               fill
@@ -72,7 +71,7 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.7 }}
             >
-              <Image src="/logo.png" alt="Water Plomberie Logo" width={100} height={100} className="mx-auto rounded-full shadow-lg bg-white/80 p-2" />
+              <img src="/logo.png" alt="Water Plomberie Logo" width="100" height="100" className="mx-auto rounded-full shadow-lg bg-white/80 p-2" />
             </motion.div>
             <motion.h1
               variants={fadeInUp}
@@ -223,11 +222,11 @@ export default function Home() {
                 />
                 {/* Avant à gauche */}
                 <div className="absolute inset-0 overflow-hidden" style={{ width: `${100 - sliderValue}%` }}>
-                  <Image src="/salledebainavant.jpeg" alt="Avant Salle de bain" fill className="object-cover transition-all duration-300" />
+                  <img src="/salledebainavant.jpeg" alt="Avant Salle de bain" className="object-cover transition-all duration-300 w-full h-full" />
                 </div>
                 {/* Après à droite */}
                 <div className="absolute inset-0 overflow-hidden" style={{ left: `${100 - sliderValue}%`, width: `${sliderValue}%` }}>
-                  <Image src="/service2.jpg" alt="Après Salle de bain" fill className="object-cover transition-all duration-300" />
+                  <img src="/service2.jpg" alt="Après Salle de bain" className="object-cover transition-all duration-300 w-full h-full" />
                 </div>
                 <div className="absolute top-2 left-2 bg-white/90 px-3 py-1 rounded text-base font-bold shadow">Avant</div>
                 <div className="absolute top-2 right-2 bg-white/90 px-3 py-1 rounded text-base font-bold shadow">Après</div>
@@ -259,11 +258,11 @@ export default function Home() {
                 />
                 {/* Avant à gauche */}
                 <div className="absolute inset-0 overflow-hidden" style={{ width: `${100 - sliderValue}%` }}>
-                  <Image src="/AVANTTOILETTE.jpeg" alt="Avant Toilette" fill className="object-cover transition-all duration-300" />
+                  <img src="/AVANTTOILETTE.jpeg" alt="Avant Toilette" className="object-cover transition-all duration-300 w-full h-full" />
                 </div>
                 {/* Après à droite */}
                 <div className="absolute inset-0 overflow-hidden" style={{ left: `${100 - sliderValue}%`, width: `${sliderValue}%` }}>
-                  <Image src="/aprestoilette.jpeg" alt="Après Toilette" fill className="object-cover transition-all duration-300" />
+                  <img src="/aprestoilette.jpeg" alt="Après Toilette" className="object-cover transition-all duration-300 w-full h-full" />
                 </div>
                 <div className="absolute top-2 left-2 bg-white/90 px-3 py-1 rounded text-base font-bold shadow">Avant</div>
                 <div className="absolute top-2 right-2 bg-white/90 px-3 py-1 rounded text-base font-bold shadow">Après</div>
@@ -293,7 +292,7 @@ export default function Home() {
         >
           <h2 className="text-3xl font-bold text-center mb-10 text-blue-800">À propos</h2>
           <div className="max-w-3xl mx-auto text-center">
-            <Image src="/logo.png" alt="Hamza DJAFFER" width={80} height={80} className="mx-auto mb-4 rounded-full" />
+            <img src="/logo.png" alt="Hamza DJAFFER" width="80" height="80" className="mx-auto mb-4 rounded-full" />
             <h3 className="text-xl font-semibold mb-2">Hamza DJAFFER - Votre expert en plomberie</h3>
             <p className="mb-4">Plombier certifié avec plus de 7 ans d&apos;expérience. Spécialisé dans l&apos;urgence, la plomberie sanitaire et le chauffage, je m&apos;engage à offrir un service rapide et de qualité à Annecy et ses environs.</p>
             <ul className="text-left inline-block mx-auto list-disc list-inside text-gray-700">

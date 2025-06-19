@@ -6,7 +6,6 @@ import SwiperCore from "swiper";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-import Image from "next/image";
 
 // eslint-disable-next-line react-hooks/rules-of-hooks
 SwiperCore.use([EffectCoverflow, Pagination]);
@@ -40,7 +39,7 @@ export default function RealisationCarousel() {
         {images.map((img, i) => (
           <SwiperSlide key={i} className="w-64 h-80 flex items-center justify-center">
             <div className="relative w-60 h-72 rounded-2xl overflow-hidden shadow-xl border-4 border-white">
-              <Image src={img.src} alt={img.alt} fill className="object-cover" />
+              <img src={img.src} alt={img.alt} className="object-cover w-full h-full" />
             </div>
           </SwiperSlide>
         ))}

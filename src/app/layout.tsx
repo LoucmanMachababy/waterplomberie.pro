@@ -4,7 +4,6 @@ import "./globals.css";
 import Script from 'next/script';
 import AccessibilityWidget from "../components/AccessibilityWidget";
 import ScrollProgressBar from "../components/ScrollProgressBar";
-import Image from "next/image";
 import Link from "next/link";
 import UrgenceStickyButton from "../components/UrgenceStickyButton";
 import CookieBanner from "../components/CookieBanner";
@@ -91,7 +90,7 @@ export default function RootLayout({
         <ScrollProgressBar />
         <nav className="sticky top-0 z-30 w-full bg-blue-700/90 backdrop-blur-md shadow-md flex items-center justify-between px-4 sm:px-12 py-3">
           <Link href="/" className="flex items-center gap-2">
-            <Image src="/logo.png" alt="Logo" width={40} height={40} className="rounded-full bg-white/80 p-1" />
+            <img src="/logo.png" alt="Logo" width="40" height="40" className="rounded-full bg-white/80 p-1" />
             <span className="text-white font-bold text-lg hidden sm:inline">WATER</span>
           </Link>
           <ul className="flex gap-3 sm:gap-6 text-white font-semibold text-base">
