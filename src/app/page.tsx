@@ -45,8 +45,6 @@ export default function Home() {
             <img
               src="/service2.jpg"
               alt="Salle de bain rénovée Hero"
-              fill
-              priority
               className="object-cover object-center w-full h-full"
             />
             <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/70" />
