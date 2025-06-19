@@ -1,7 +1,3 @@
-"use client";
-
-import React from "react";
-
 export const metadata = {
   title: "Mentions légales - Water Plomberie Annecy",
   description: "Mentions légales du site Water Plomberie Annecy, artisan plombier à Annecy, Haute-Savoie.",
