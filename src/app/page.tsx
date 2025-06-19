@@ -29,9 +29,9 @@ export default function Home() {
 
   return (
     <AnimatePresence mode="wait">
-      <div className="bg-gradient-to-br from-blue-50 to-white min-h-screen text-gray-900">
+      <div className="bg-gradient-to-br from-blue-50 to-white min-h-screen text-gray-900 px-2 sm:px-0">
         {/* HERO SECTION avec image de fond immersive, overlay, parallax et reveal */}
-        <section ref={heroRef} className="relative flex items-center justify-center min-h-[70vh] sm:min-h-[80vh] overflow-hidden">
+        <section ref={heroRef} className="relative flex items-center justify-center min-h-[70vh] sm:min-h-[80vh] overflow-hidden px-2">
           {/* Dégradé animé en fond */}
           <div className="absolute inset-0 w-full h-full z-0 animate-gradient bg-gradient-to-br from-blue-700 via-blue-400 to-cyan-300 opacity-80 blur-sm" style={{backgroundSize:'200% 200%'}} />
           {/* Image de fond avec parallax */}
@@ -60,7 +60,7 @@ export default function Home() {
                 transition: { staggerChildren: 0.15 }
               }
             }}
-            className="relative z-10 flex flex-col items-center justify-center text-center px-4"
+            className="relative z-10 flex flex-col items-center justify-center text-center px-2 sm:px-4"
           >
             <motion.div
               variants={fadeInUp}
@@ -129,10 +129,10 @@ export default function Home() {
           whileInView="show"
           viewport={{ once: true, amount: 0.3 }}
           variants={fadeInUp}
-          className="py-16 px-2 sm:px-4 bg-white"
+          className="py-10 px-1 sm:px-4 bg-white"
         >
           <h2 className="text-3xl font-bold text-center mb-10 text-blue-800">Nos services</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 max-w-5xl mx-auto">
             {/* Urgence 24/7 */}
             <motion.div
               whileHover={{ scale: 1.07, rotate: 2, boxShadow: "0 8px 32px #3b82f6aa" }}
@@ -200,14 +200,14 @@ export default function Home() {
           whileInView="show"
           viewport={{ once: true, amount: 0.3 }}
           variants={fadeInUp}
-          className="py-16 px-2 sm:px-4 bg-gradient-to-r from-blue-100 to-white"
+          className="py-10 px-1 sm:px-4 bg-gradient-to-r from-blue-100 to-white"
         >
           <h2 className="text-3xl font-bold text-center mb-10 text-blue-800">Avant / Après</h2>
-          <div className="flex flex-col md:flex-row gap-8 max-w-4xl mx-auto items-center justify-center">
+          <div className="flex flex-col md:flex-row gap-6 sm:gap-8 max-w-4xl mx-auto items-center justify-center">
             {/* SLIDER SALLE DE BAIN (avant à gauche, après à droite) */}
             <div className="flex-1 text-center">
               <h4 className="font-semibold mb-2">Salle de bain</h4>
-              <div className="relative mx-auto w-[90vw] max-w-[400px] h-56 md:h-64 rounded-3xl overflow-hidden shadow-2xl group bg-white/30 backdrop-blur-md border border-white/40 glass-card transition-transform duration-300 hover:scale-105">
+              <div className="relative mx-auto w-full max-w-[400px] h-48 sm:h-56 rounded-3xl overflow-hidden shadow-2xl group bg-white/30 backdrop-blur-md border border-white/40 glass-card transition-transform duration-300 hover:scale-105">
                 <input
                   type="range"
                   min={0}
@@ -243,7 +243,7 @@ export default function Home() {
             {/* SLIDER TOILETTE (avant à gauche, après à droite) */}
             <div className="flex-1 text-center">
               <h4 className="font-semibold mb-2">Toilette</h4>
-              <div className="relative mx-auto w-[90vw] max-w-[400px] h-56 md:h-64 rounded-3xl overflow-hidden shadow-2xl group bg-white/30 backdrop-blur-md border border-white/40 glass-card transition-transform duration-300 hover:scale-105">
+              <div className="relative mx-auto w-full max-w-[400px] h-48 sm:h-56 rounded-3xl overflow-hidden shadow-2xl group bg-white/30 backdrop-blur-md border border-white/40 glass-card transition-transform duration-300 hover:scale-105">
                 <input
                   type="range"
                   min={0}
@@ -286,7 +286,7 @@ export default function Home() {
           whileInView="show"
           viewport={{ once: true, amount: 0.3 }}
           variants={fadeInUp}
-          className="py-16 px-4 bg-white"
+          className="py-10 px-2 sm:px-4 bg-white"
         >
           <h2 className="text-3xl font-bold text-center mb-10 text-blue-800">À propos</h2>
           <div className="max-w-3xl mx-auto text-center">
@@ -308,7 +308,7 @@ export default function Home() {
           whileInView="show"
           viewport={{ once: true, amount: 0.3 }}
           variants={fadeInUp}
-          className="py-16 px-4 bg-gradient-to-r from-blue-100 to-white"
+          className="py-10 px-2 sm:px-4 bg-gradient-to-r from-blue-100 to-white"
         >
           <h2 className="text-3xl font-bold text-center mb-10 text-blue-800">Avis clients</h2>
           <div className="max-w-2xl mx-auto">
@@ -351,7 +351,7 @@ export default function Home() {
         </motion.section>
 
         {/* ZONE D'INTERVENTION */}
-        <section className="py-16 px-4 bg-gradient-to-br from-blue-50 to-white">
+        <section className="py-10 px-2 sm:px-4 bg-gradient-to-br from-blue-50 to-white">
           <h2 className="text-3xl font-bold text-center mb-8 text-blue-800">Zone d&apos;intervention en Haute-Savoie (74)</h2>
           <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-8">
             {/* Carte SVG Haute-Savoie stylisée */}
@@ -408,7 +408,7 @@ export default function Home() {
           whileInView="show"
           viewport={{ once: true, amount: 0.3 }}
           variants={fadeInUp}
-          className="py-16 px-4 bg-white"
+          className="py-10 px-2 sm:px-4 bg-white"
         >
           <h2 className="text-3xl font-bold text-center mb-10 text-blue-800">Contactez-nous pour un devis rapide</h2>
           {/* Encart premium devis gratuit */}
@@ -443,7 +443,7 @@ export default function Home() {
         </motion.section>
 
         {/* FOOTER */}
-        <footer className="py-8 text-center text-gray-500 text-sm">
+        <footer className="py-8 px-2 text-center text-gray-500 text-sm">
           © 2025 Water Plomberie. Tous droits réservés.
       </footer>
     </div>
