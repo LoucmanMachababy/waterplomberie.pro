@@ -9,7 +9,7 @@ const animations = {
 };
 
 export default function ServiceLottieIcon({ type }: { type: keyof typeof animations }) {
-  const [data, setData] = useState<any>(null);
+  const [data, setData] = useState<unknown>(null);
 
   useEffect(() => {
     fetch(animations[type])

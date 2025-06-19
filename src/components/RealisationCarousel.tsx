@@ -1,10 +1,15 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
+// @ts-expect-error: Swiper 8 types are inexact, EffectCoverflow existe bien à l'exécution
 import { EffectCoverflow, Pagination } from "swiper";
+import SwiperCore from "swiper";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import Image from "next/image";
+
+// eslint-disable-next-line react-hooks/rules-of-hooks
+SwiperCore.use([EffectCoverflow, Pagination]);
 
 const images = [
   { src: "/service2.jpg", alt: "Salle de bain rénovée" },
@@ -30,7 +35,6 @@ export default function RealisationCarousel() {
           slideShadows: true,
         }}
         pagination={{ clickable: true }}
-        modules={[EffectCoverflow, Pagination]}
         className="realisation-swiper"
       >
         {images.map((img, i) => (

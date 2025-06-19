@@ -31,13 +31,13 @@ export default function Confidentialite() {
         <section>
           <h2 className="text-2xl font-semibold text-blue-700 mb-2">Droits des utilisateurs</h2>
           <p>
-            Conformément au RGPD, vous disposez d'un droit d'accès, de rectification, d'opposition, de suppression et de portabilité de vos données. Pour exercer vos droits, contactez-nous à <a href="mailto:watter.plomberie@gmail.com" className="text-blue-700 hover:underline">watter.plomberie@gmail.com</a>.
+            Conformément au RGPD, vous disposez d&apos;un droit d&apos;accès, de rectification, d&apos;opposition, de suppression et de portabilité de vos données. Pour exercer vos droits, contactez-nous à <a href="mailto:watter.plomberie@gmail.com" className="text-blue-700 hover:underline">watter.plomberie@gmail.com</a>.
           </p>
         </section>
         <section>
           <h2 className="text-2xl font-semibold text-blue-700 mb-2">Cookies</h2>
           <p>
-            Ce site n'utilise que des cookies strictement nécessaires à son fonctionnement (aucun cookie de tracking ou publicitaire sans consentement explicite). Si des outils de mesure d'audience ou de suivi sont ajoutés, un bandeau de consentement s'affichera.
+            Ce site n&apos;utilise que des cookies strictement nécessaires à son fonctionnement (aucun cookie de tracking ou publicitaire sans consentement explicite). Si des outils de mesure d&apos;audience ou de suivi sont ajoutés, un bandeau de consentement s&apos;affichera.
           </p>
         </section>
         <section>

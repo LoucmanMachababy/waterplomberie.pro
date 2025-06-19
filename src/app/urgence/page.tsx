@@ -7,8 +7,8 @@ export const metadata = {
 
 const urgenceFaq = [
   {
-    question: "J'ai une fuite d'eau, que faire en attendant le plombier ?",
-    answer: "Coupez l'eau au robinet général, épongez l'eau, coupez l'électricité si besoin, puis appelez-nous immédiatement.",
+    question: "J&apos;ai une fuite d&apos;eau, que faire en attendant le plombier ?",
+    answer: "Coupez l&apos;eau au robinet général, épongez l&apos;eau, coupez l&apos;électricité si besoin, puis appelez-nous immédiatement.",
   },
   {
     question: "Quels sont les cas d'urgence plomberie ?",
@@ -28,9 +28,9 @@ export default function UrgencePage() {
       <div className="max-w-2xl w-full bg-white rounded-xl shadow p-6 mb-8">
         <h2 className="text-2xl font-semibold text-red-700 mb-4">Conseils immédiats</h2>
         <ul className="list-disc list-inside text-gray-800 space-y-2">
-          <li>Coupez l'eau au robinet général</li>
-          <li>Épongez l'eau pour limiter les dégâts</li>
-          <li>Coupez l'électricité si la fuite est proche d'une prise</li>
+          <li>Coupez l&apos;eau au robinet général</li>
+          <li>Épongez l&apos;eau pour limiter les dégâts</li>
+          <li>Coupez l&apos;électricité si la fuite est proche d&apos;une prise</li>
           <li>Appelez Water Plomberie : <b>+33 7 83 16 76 13</b></li>
         </ul>
       </div>
@@ -45,7 +45,7 @@ export default function UrgencePage() {
           ))}
         </div>
       </div>
-      <Link href="/" className="mt-10 text-blue-700 hover:underline">Retour à l'accueil</Link>
+      <Link href="/" className="mt-10 text-blue-700 hover:underline">Retour à l&apos;accueil</Link>
     </div>
   );
 } 

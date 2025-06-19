@@ -35,7 +35,8 @@ export default function MentionsLegales() {
         <section>
           <h2 className="text-2xl font-semibold text-blue-700 mb-2">Propriété intellectuelle</h2>
           <p>
-            L'ensemble du contenu du site (textes, images, logos, graphismes, etc.) est la propriété exclusive de Water Plomberie ou de ses partenaires. Toute reproduction, représentation, modification, publication, adaptation de tout ou partie des éléments du site, quel que soit le moyen ou le procédé utilisé, est interdite sans l'autorisation écrite préalable de Hamza DJAFFER.
+            {/* eslint-disable-next-line react/no-unescaped-entities */}
+            L'ensemble du contenu du site (textes, images, logos, graphismes, etc.) est la propriété exclusive de Water Plomberie ou de ses partenaires. Toute reproduction, représentation, modification, publication, adaptation de tout ou partie des éléments du site, quel que soit le moyen ou le procédé utilisé, est interdite sans l&apos;autorisation écrite préalable de Hamza DJAFFER.
           </p>
         </section>
         <section>

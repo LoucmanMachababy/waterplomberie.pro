@@ -2,25 +2,19 @@
 import Image from "next/image";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
+// @ts-expect-error swiper types are not compatible with Next.js build
 import { Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-import { useState, useRef, useCallback, useEffect } from "react";
+import { useState, useRef, useCallback } from "react";
 import HeroParticles from "../components/HeroParticles";
 import ContactModal from "../components/ContactModal";
 import ServiceLottieIcon from "../components/ServiceLottieIcon";
-import Lottie from "lottie-react";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
   show: { opacity: 1, y: 0, transition: { duration: 0.7 } },
-};
-
-const animations = {
-  robinet: "https://assets2.lottiefiles.com/packages/lf20_2ks3pjua.json",
-  flamme: "https://assets2.lottiefiles.com/packages/lf20_4kx2q32n.json",
-  outils: "https://assets2.lottiefiles.com/packages/lf20_2glqweqs.json",
 };
 
 export default function Home() {
@@ -125,8 +119,8 @@ export default function Home() {
           <div className="absolute top-4 right-4 z-20 block sm:hidden">
             <a href="tel:+33783167613" className="bg-green-500 text-white px-4 py-2 rounded-full shadow hover:bg-green-600 transition flex items-center gap-2">
               <span className="material-icons">call</span> Appel rapide
-            </a>
-          </div>
+          </a>
+        </div>
           {/* Modal de contact (affiché si modalOpen) */}
           <ContactModal open={modalOpen} onClose={closeModal} />
         </section>
@@ -454,8 +448,8 @@ export default function Home() {
         {/* FOOTER */}
         <footer className="py-8 text-center text-gray-500 text-sm">
           © 2025 Water Plomberie. Tous droits réservés.
-        </footer>
-      </div>
+      </footer>
+    </div>
     </AnimatePresence>
   );
 }

@@ -5,10 +5,11 @@ export default function HeroParticles() {
   const canvasRef = useRef(null);
 
   useEffect(() => {
-    const canvas = canvasRef.current;
+    const canvas = canvasRef.current as HTMLCanvasElement | null;
     if (!canvas) return;
     const ctx = canvas.getContext("2d");
-    let animationFrameId;
+    if (!ctx) return;
+    let animationFrameId: number;
     const dpr = window.devicePixelRatio || 1;
     canvas.width = canvas.offsetWidth * dpr;
     canvas.height = canvas.offsetHeight * dpr;
@@ -23,6 +24,7 @@ export default function HeroParticles() {
     }));
 
     function draw() {
+      if (!ctx || !canvas) return;
       ctx.clearRect(0, 0, canvas.offsetWidth, canvas.offsetHeight);
       for (const b of bubbles) {
         ctx.beginPath();
