@@ -1,0 +1,45 @@
+@import "tailwindcss";
+@import "swiper/css";
+@import "swiper/css/pagination";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.high-contrast {
+  background: #000 !important;
+  color: #fff !important;
+}
+.high-contrast a, .high-contrast .text-blue-700, .high-contrast .text-blue-800 {
+  color: #ffd600 !important;
+}
+.high-contrast .bg-white, .high-contrast .bg-blue-50, .high-contrast .bg-blue-100, .high-contrast .bg-blue-700, .high-contrast .bg-blue-800 {
+  background: #111 !important;
+  color: #fff !important;
+}
+.high-contrast input, .high-contrast textarea {
+  background: #222 !important;
+  color: #fff !important;
+  border-color: #ffd600 !important;
+}
