@@ -1,15 +1,7 @@
 "use client";
-import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
-import { Swiper, SwiperSlide } from "swiper/react";
-// @ts-expect-error swiper types are not compatible with Next.js build
-import { Pagination } from "swiper";
-import "swiper/css";
-import "swiper/css/effect-coverflow";
-import "swiper/css/pagination";
-import { useState, useRef, useCallback } from "react";
-import HeroParticles from "../components/HeroParticles";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
 import ContactModal from "../components/ContactModal";
-import ServiceLottieIcon from "../components/ServiceLottieIcon";
 import TestimonialsWithPhotos from "../components/TestimonialsWithPhotos";
 import NewsletterSignup from "../components/NewsletterSignup";
 import TrustElements from "../components/TrustElements";
@@ -28,15 +20,9 @@ const fadeInUp = {
 };
 
 export default function Home() {
-  // Pour le slider avant/après
-  const [sliderValue, setSliderValue] = useState(50);
-  const heroRef = useRef(null);
   const [modalOpen, setModalOpen] = useState(false);
-  const openModal = useCallback(() => setModalOpen(true), []);
-  const closeModal = useCallback(() => setModalOpen(false), []);
-  // Parallax effet sur le Hero
-  const { scrollY } = useScroll();
-  const y = useTransform(scrollY, [0, 400], ["0px", "60px"]);
+  const openModal = () => setModalOpen(true);
+  const closeModal = () => setModalOpen(false);
 
   return (
     <AnimatePresence mode="wait">

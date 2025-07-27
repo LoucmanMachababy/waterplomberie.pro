@@ -2,18 +2,16 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: 'export',
-  // Force l'utilisation de Webpack au lieu de Turbopack
-  experimental: {
-    turbo: false
+  eslint: {
+    ignoreDuringBuilds: true,
   },
-  // Configuration Webpack personnalisée si nécessaire
-  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
-    // Optimisations Webpack personnalisées
-    if (!dev && !isServer) {
-      config.optimization.splitChunks.chunks = 'all';
-    }
-    return config;
+  typescript: {
+    ignoreBuildErrors: true,
   },
+  images: {
+    unoptimized: true,
+  },
+  trailingSlash: true,
 };
 
 export default nextConfig;

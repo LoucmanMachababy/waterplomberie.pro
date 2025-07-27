@@ -39,7 +39,7 @@ export default function PlombierAnnecyPage() {
             <div className="text-red-500 text-4xl mb-4">🚨</div>
             <h2 className="text-2xl font-bold text-red-800 mb-4">Urgence Plomberie Annecy</h2>
             <p className="text-gray-700 mb-4">
-              Fuite d'eau, canalisation bouchée, panne de chauffage ? Intervention d'urgence 24h/24 
+              Fuite d&apos;eau, canalisation bouchée, panne de chauffage ? Intervention d&apos;urgence 24h/24
               à Annecy centre, Annecy-le-Vieux, Novel, Meythet.
             </p>
             <ul className="text-sm text-gray-600 space-y-2">
@@ -54,8 +54,8 @@ export default function PlombierAnnecyPage() {
             <div className="text-orange-500 text-4xl mb-4">🔥</div>
             <h2 className="text-2xl font-bold text-orange-800 mb-4">Chauffage Annecy</h2>
             <p className="text-gray-700 mb-4">
-              Installation, entretien et dépannage de chauffage à Annecy. Chaudières, radiateurs, 
-              ballons d'eau chaude, pompes à chaleur.
+              Installation, entretien et dépannage de chauffage à Annecy. Chaudières, radiateurs,
+              ballons d&apos;eau chaude, pompes à chaleur.
             </p>
             <ul className="text-sm text-gray-600 space-y-2">
               <li>✓ Installation de chaudières gaz/électrique</li>
@@ -74,14 +74,14 @@ export default function PlombierAnnecyPage() {
             </p>
             <ul className="text-sm text-gray-600 space-y-2">
               <li>✓ Conception sur mesure</li>
-              <li>✓ Douche à l'italienne</li>
+              <li>✓ Douche à l&apos;italienne</li>
               <li>✓ Installation WC suspendu</li>
               <li>✓ Pose carrelage et faïence</li>
             </ul>
           </div>
         </div>
 
-        {/* Zones d'intervention à Annecy */}
+        {/* Zones d&apos;intervention à Annecy */}
         <div className="bg-white rounded-2xl shadow-xl p-8 mb-16">
           <h2 className="text-3xl font-bold text-blue-800 mb-8 text-center">
             Zones d'intervention à Annecy
@@ -90,7 +90,7 @@ export default function PlombierAnnecyPage() {
             <div>
               <h3 className="text-xl font-semibold text-blue-700 mb-4">Annecy Centre-Ville</h3>
               <p className="text-gray-700 mb-4">
-                Intervention rapide dans le centre historique d'Annecy : Vieille Ville, 
+                Intervention rapide dans le centre historique d&apos;Annecy : Vieille Ville,
                 quartier de la gare, Courier, Parmelan.
               </p>
               <ul className="text-sm text-gray-600 space-y-1">
@@ -104,7 +104,7 @@ export default function PlombierAnnecyPage() {
             <div>
               <h3 className="text-xl font-semibold text-blue-700 mb-4">Communes d'Annecy</h3>
               <p className="text-gray-700 mb-4">
-                Service de plomberie dans toutes les communes d'Annecy : 
+                Service de plomberie dans toutes les communes d&apos;Annecy :
                 Annecy-le-Vieux, Cran-Gevrier, Meythet, Seynod, Pringy.
               </p>
               <ul className="text-sm text-gray-600 space-y-1">
@@ -150,7 +150,7 @@ export default function PlombierAnnecyPage() {
               <div className="text-orange-500 text-4xl mb-3">👨‍🔧</div>
               <h3 className="font-semibold text-blue-800 mb-2">Expertise</h3>
               <p className="text-sm text-gray-700">
-                7 ans d'expérience en plomberie à Annecy
+                7 ans d&apos;expérience en plomberie à Annecy
               </p>
             </div>
           </div>
@@ -189,7 +189,7 @@ export default function PlombierAnnecyPage() {
                 <li>• Nettoyage complet</li>
                 <li>• Vérification sécurité</li>
                 <li>• Réglages optimaux</li>
-                <li>• Certificat d'entretien</li>
+                <li>• Certificat d&apos;entretien</li>
               </ul>
             </div>
           </div>
@@ -200,7 +200,7 @@ export default function PlombierAnnecyPage() {
 
         {/* Contact plombier Annecy */}
         <div className="bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl p-8 text-center text-white">
-          <h2 className="text-3xl font-bold mb-4">Besoin d'un plombier à Annecy ?</h2>
+          <h2 className="text-3xl font-bold mb-4">Besoin d&apos;un plombier à Annecy ?</h2>
           <p className="text-xl mb-6">
             Contactez Water Plomberie pour une intervention rapide et professionnelle !
           </p>
