@@ -5,19 +5,14 @@ import ContactModal from "../components/ContactModal";
 import TestimonialsWithPhotos from "../components/TestimonialsWithPhotos";
 import NewsletterSignup from "../components/NewsletterSignup";
 import TrustElements from "../components/TrustElements";
-import MobileNavigation from "../components/MobileNavigation";
 import ModernHeroSection from "../components/ModernHeroSection";
 import ModernServiceCard from "../components/ModernServiceCard";
 import ModernBeforeAfter from "../components/ModernBeforeAfter";
-import ModernFooter from "../components/ModernFooter";
+// import ModernFooter from "../components/ModernFooter"; // Handled by layout
 import FloatingActionButtons from "../components/FloatingActionButtons";
 import PlombierAnnecySEO from "../components/PlombierAnnecySEO";
 import PlombierAnnecySchema from "../components/PlombierAnnecySchema";
-
-const fadeInUp = {
-  hidden: { opacity: 0, y: 40 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.7 } },
-};
+import { AlertTriangle, Bath, Flame, Globe, MapPin, CheckCircle2 } from "lucide-react";
 
 export default function Home() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -26,77 +21,70 @@ export default function Home() {
 
   return (
     <AnimatePresence mode="wait">
-      <div className="bg-gradient-to-br from-blue-50 to-white min-h-screen text-gray-900 px-2 sm:px-0">
+      <div className="bg-white dark:bg-slate-950 min-h-screen text-slate-900 dark:text-slate-100 overflow-x-hidden">
         <PlombierAnnecySchema />
-        <MobileNavigation />
-        {/* HERO SECTION MODERNE */}
+
+        {/* HERO SECTION */}
         <ModernHeroSection onContactClick={openModal} />
 
-        {/* Modal de contact */}
         <ContactModal open={modalOpen} onClose={closeModal} />
 
-        {/* SECTION SEO PLOMBIER ANNECY */}
-        <PlombierAnnecySEO />
-
-        {/* SERVICES MODERNES */}
-        <section id="services" className="py-20 px-4 bg-gradient-to-br from-white via-blue-50 to-cyan-50">
+        {/* SERVICES SECTION */}
+        <section id="services" className="py-32 px-6">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              className="text-center mb-16"
+              className="text-center mb-24"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-blue-800 mb-6">
-                Nos Services
-                <span className="block text-2xl md:text-3xl text-cyan-600 font-normal mt-2">
-                  Excellence & Professionnalisme
-                </span>
+              <h2 className="text-5xl md:text-7xl font-black mb-8 tracking-tighter">
+                Services <span className="text-blue-600">Premium</span>
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                Water Plomberie vous accompagne dans tous vos projets de plomberie,
-                du dépannage d'urgence à la rénovation complète
+              <p className="text-xl text-slate-500 max-w-2xl mx-auto leading-relaxed font-medium">
+                Une expertise technique rigoureuse associée à un service client irréprochable.
+                Nous intervenons sur tous vos projets avec la même exigence de qualité.
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
               <ModernServiceCard
-                icon="🚨"
+                icon={AlertTriangle}
                 title="Urgence 24/7"
-                description="Intervention rapide jour et nuit pour tous vos besoins urgents de plomberie à Annecy et environs."
+                description="Réactivité absolue pour stopper vos fuites et pannes en moins de 30 minutes à Annecy."
                 features={[
-                  "Intervention en moins de 30 minutes",
-                  "Disponible 24h/24 et 7j/7",
-                  "Diagnostic gratuit",
-                  "Réparation immédiate si possible"
+                  "Intervention Flash < 30min",
+                  "Disponibilité nuit & weekend",
+                  "Diagnostic expert immédiat",
+                  "Sécurisation des lieux"
                 ]}
                 color="red"
                 onContactClick={openModal}
               />
 
               <ModernServiceCard
-                icon="🚿"
+                icon={Bath}
                 title="Plomberie Sanitaire"
-                description="Installation et entretien de robinetterie, WC, baignoires, douches et tous équipements sanitaires."
+                description="Conception et installation de systèmes sanitaires haute performance pour votre confort."
                 features={[
-                  "Installation WC et lavabos",
-                  "Robinetterie moderne",
-                  "Douche à l'italienne",
-                  "Rénovation salle de bain"
+                  "Salles de bain de luxe",
+                  "Robinetterie haut de gamme",
+                  "Traitement de l'eau",
+                  "Réseaux d'évacuation"
                 ]}
                 color="blue"
                 onContactClick={openModal}
               />
 
               <ModernServiceCard
-                icon="🔥"
-                title="Chauffage"
-                description="Pose et maintenance de systèmes de chauffage, radiateurs, chaudières et ballons d'eau chaude."
+                icon={Flame}
+                title="Confort Thermique"
+                description="Optimisation de vos systèmes de chauffage pour une efficacité énergétique maximale."
                 features={[
-                  "Installation chaudières",
-                  "Entretien annuel",
-                  "Réparation radiateurs",
-                  "Ballons d'eau chaude"
+                  "Pompes à chaleur",
+                  "Chaudières nouvelle gén.",
+                  "Planchers chauffants",
+                  "Entretien & Optimisation"
                 ]}
                 color="orange"
                 onContactClick={openModal}
@@ -105,203 +93,161 @@ export default function Home() {
           </div>
         </section>
 
-        {/* AVANT/APRÈS MODERNE */}
+        {/* BEFORE/AFTER SECTION */}
         <ModernBeforeAfter />
 
-        {/* À PROPOS */}
-        <motion.section
-          id="a-propos"
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={fadeInUp}
-          className="py-10 px-2 sm:px-4 bg-white"
-        >
-          <h2 className="text-3xl font-bold text-center mb-10 text-blue-800">À propos de Water Plomberie</h2>
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-8">
-              <img src="/logo.png" alt="Hamza DJAFFER - Plombier Annecy" width="80" height="80" className="mx-auto mb-4 rounded-full" />
-              <h3 className="text-2xl font-semibold mb-4 text-blue-800">Hamza DJAFFER - Votre plombier de confiance à Annecy</h3>
-              <p className="text-lg mb-6 text-gray-700">
-                Plombier certifié avec plus de 7 ans d&apos;expérience en Haute-Savoie. Spécialisé dans l&apos;urgence,
-                la plomberie sanitaire et le chauffage, je m&apos;engage à offrir un service rapide et de qualité
-                à Annecy et dans toute la région.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-              <div className="bg-blue-50 rounded-lg p-6">
-                <h4 className="text-xl font-semibold mb-4 text-blue-800">🚨 Nos Services d&apos;Urgence</h4>
-                <ul className="space-y-2 text-gray-700">
-                  <li>✓ <strong>Dépannage 24h/24 et 7j/7</strong> à Annecy et environs</li>
-                  <li>✓ <strong>Intervention rapide</strong> en moins de 30 minutes</li>
-                  <li>✓ <strong>Réparation de fuites</strong> d&apos;eau urgentes</li>
-                  <li>✓ <strong>Débouchage canalisations</strong> et évacuations</li>
-                  <li>✓ <strong>Dépannage chauffage</strong> en urgence</li>
-                </ul>
-              </div>
-
-              <div className="bg-orange-50 rounded-lg p-6">
-                <h4 className="text-xl font-semibold mb-4 text-orange-800">🔧 Expertise Technique</h4>
-                <ul className="space-y-2 text-gray-700">
-                  <li>✓ <strong>Plomberie sanitaire :</strong> WC, robinetterie, douches</li>
-                  <li>✓ <strong>Chauffage :</strong> chaudières, radiateurs, ballons</li>
-                  <li>✓ <strong>Rénovation :</strong> salles de bain complètes</li>
-                  <li>✓ <strong>Installation :</strong> équipements neufs</li>
-                  <li>✓ <strong>Entretien :</strong> maintenance préventive</li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="bg-gradient-to-r from-blue-100 to-cyan-100 rounded-lg p-6">
-              <h4 className="text-xl font-semibold mb-4 text-blue-800 text-center">
-                Pourquoi choisir Water Plomberie à Annecy ?
-              </h4>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
-                <div>
-                  <div className="text-3xl mb-2">⚡</div>
-                  <p className="font-semibold text-blue-700">Intervention Express</p>
-                  <p className="text-sm text-gray-600">Déplacement rapide sur Annecy</p>
+        {/* ABOUT SECTION */}
+        <section id="a-propos" className="py-32 bg-slate-50 dark:bg-slate-900/50">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="grid lg:grid-cols-2 gap-20 items-center">
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+              >
+                <div className="relative inline-block mb-6">
+                  <div className="absolute inset-0 bg-blue-500 rounded-2xl blur-2xl opacity-20" />
+                  <span className="relative px-4 py-2 rounded-xl bg-blue-100 dark:bg-blue-500/10 text-blue-600 dark:text-blue-400 text-sm font-bold uppercase tracking-widest">
+                    L'Artisanat d'Excellence
+                  </span>
                 </div>
-                <div>
-                  <div className="text-3xl mb-2">💰</div>
-                  <p className="font-semibold text-blue-700">Devis Gratuit</p>
-                  <p className="text-sm text-gray-600">Estimation sans engagement</p>
+                <h2 className="text-4xl md:text-6xl font-black mb-8 leading-tight">
+                  Hamza DJAFFER,<br />
+                  <span className="text-slate-400">Votre Expert de Confiance.</span>
+                </h2>
+                <p className="text-xl text-slate-500 mb-8 leading-relaxed">
+                  Plombier certifié avec plus de 7 ans d'expérience en Haute-Savoie.
+                  Je m'engage personnellement à offrir un service rapide, durable et transparent.
+                </p>
+                <div className="space-y-4 mb-10">
+                  {[
+                    "Diplôme d'Expertise Technique",
+                    "Assurances & Responsabilité Civile",
+                    "Matériel de pointe (Camera thermique, Détection acoustique)",
+                    "Devis transparent et sans surprise"
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-center gap-4 text-lg font-semibold">
+                      <div className="w-6 h-6 rounded-full bg-blue-500 flex items-center justify-center text-white">
+                        <CheckCircle2 size={14} />
+                      </div>
+                      {item}
+                    </div>
+                  ))}
                 </div>
-                <div>
-                  <div className="text-3xl mb-2">🛡️</div>
-                  <p className="font-semibold text-blue-700">Garantie Qualité</p>
-                  <p className="text-sm text-gray-600">Travaux garantis 2 ans</p>
+                <button
+                  onClick={openModal}
+                  className="px-8 py-4 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-2xl font-bold text-lg hover:scale-105 transition-all shadow-xl"
+                >
+                  Me contacter directement
+                </button>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                className="relative"
+              >
+                <div className="aspect-square rounded-[3rem] overflow-hidden rotate-3 shadow-2xl">
+                  <img src="/service2.jpg" alt="Expertise Plomberie" className="w-full h-full object-cover" />
                 </div>
-              </div>
+                <div className="absolute -bottom-10 -left-10 w-48 h-48 bg-blue-600 rounded-full flex flex-col items-center justify-center text-white p-6 shadow-2xl -rotate-12 border-4 border-white dark:border-slate-900">
+                  <span className="text-4xl font-black">7+</span>
+                  <span className="text-xs font-bold uppercase tracking-tighter text-center">Années d'Expertise Terrain</span>
+                </div>
+              </motion.div>
             </div>
           </div>
-        </motion.section>
+        </section>
 
-        {/* ÉLÉMENTS DE CONFIANCE */}
+        {/* TRUST ELEMENTS */}
         <TrustElements />
 
-        {/* AVIS CLIENTS AVEC PHOTOS */}
-        <motion.section
-          id="avis"
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={fadeInUp}
-          className="py-16 px-2 sm:px-4 bg-gradient-to-r from-blue-100 to-white"
-        >
-          <h2 className="text-3xl font-bold text-center mb-4 text-blue-800">Ce que disent nos clients</h2>
-          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-            Découvrez les témoignages de nos clients satisfaits à Annecy et dans toute la Haute-Savoie
-          </p>
-          <TestimonialsWithPhotos />
-        </motion.section>
-
-        {/* ZONE D'INTERVENTION */}
-        <section className="py-10 px-2 sm:px-4 bg-gradient-to-br from-blue-50 to-white">
-          <h2 className="text-3xl font-bold text-center mb-8 text-blue-800">Zone d&apos;intervention en Haute-Savoie (74)</h2>
-          <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-8">
-            {/* Carte SVG Haute-Savoie stylisée */}
-            <div className="flex-1 flex items-center justify-center">
-              <div className="bg-white/40 backdrop-blur-md rounded-3xl shadow-xl border border-blue-200 p-6">
-                <svg width="260" height="260" viewBox="0 0 260 260" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  {/* Forme simplifiée de la Haute-Savoie */}
-                  <path d="M60,30 Q30,80 60,180 Q100,240 200,220 Q240,180 210,120 Q250,80 180,40 Q120,10 60,30 Z" fill="#e0f2fe" stroke="#38bdf8" strokeWidth="3" />
-                  {/* Annecy */}
-                  <circle cx="120" cy="110" r="13" fill="#2563eb" stroke="#fff" strokeWidth="3" />
-                  <text x="120" y="108" textAnchor="middle" fontSize="13" fontWeight="bold" fill="#fff">Annecy</text>
-                  {/* Thonon-les-Bains */}
-                  <circle cx="80" cy="60" r="7" fill="#38bdf8" stroke="#fff" strokeWidth="2" />
-                  <text x="80" y="55" textAnchor="middle" fontSize="11" fill="#2563eb">Thonon</text>
-                  {/* Annemasse */}
-                  <circle cx="200" cy="70" r="7" fill="#38bdf8" stroke="#fff" strokeWidth="2" />
-                  <text x="200" y="65" textAnchor="middle" fontSize="11" fill="#2563eb">Annemasse</text>
-                  {/* Cluses */}
-                  <circle cx="180" cy="150" r="7" fill="#38bdf8" stroke="#fff" strokeWidth="2" />
-                  <text x="180" y="145" textAnchor="middle" fontSize="11" fill="#2563eb">Cluses</text>
-                  {/* Rumilly */}
-                  <circle cx="90" cy="180" r="7" fill="#38bdf8" stroke="#fff" strokeWidth="2" />
-                  <text x="90" y="195" textAnchor="middle" fontSize="11" fill="#2563eb">Rumilly</text>
-                  {/* La Roche-sur-Foron */}
-                  <circle cx="160" cy="110" r="7" fill="#38bdf8" stroke="#fff" strokeWidth="2" />
-                  <text x="160" y="105" textAnchor="middle" fontSize="10" fill="#2563eb">La Roche</text>
-                </svg>
-              </div>
+        {/* TESTIMONIALS */}
+        <section id="avis" className="py-32 overflow-hidden bg-white dark:bg-slate-950">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center mb-20">
+              <h2 className="text-5xl font-black mb-6">La Voix de nos <span className="text-blue-600">Clients</span></h2>
+              <p className="text-xl text-slate-500">Découvrez pourquoi Annecy nous fait confiance.</p>
             </div>
-            {/* Texte SEO local */}
-            <div className="flex-1 text-center md:text-left">
-              <p className="text-lg text-gray-700 mb-4">Intervention rapide en Haute-Savoie (74) : Annecy, Thonon-les-Bains, Annemasse, Cluses, Rumilly, La Roche-sur-Foron, Sallanches, Bonneville, Seynod, Cran-Gevrier, Pringy, et toutes les communes alentours.</p>
-              <ul className="flex flex-wrap gap-3 justify-center md:justify-start text-blue-700 font-semibold text-base">
-                <li className="bg-blue-100 rounded-full px-4 py-1 shadow">Annecy</li>
-                <li className="bg-blue-100 rounded-full px-4 py-1 shadow">Thonon-les-Bains</li>
-                <li className="bg-blue-100 rounded-full px-4 py-1 shadow">Annemasse</li>
-                <li className="bg-blue-100 rounded-full px-4 py-1 shadow">Cluses</li>
-                <li className="bg-blue-100 rounded-full px-4 py-1 shadow">Rumilly</li>
-                <li className="bg-blue-100 rounded-full px-4 py-1 shadow">La Roche-sur-Foron</li>
-                <li className="bg-blue-100 rounded-full px-4 py-1 shadow">Sallanches</li>
-                <li className="bg-blue-100 rounded-full px-4 py-1 shadow">Bonneville</li>
-                <li className="bg-blue-100 rounded-full px-4 py-1 shadow">Seynod</li>
-                <li className="bg-blue-100 rounded-full px-4 py-1 shadow">Cran-Gevrier</li>
-                <li className="bg-blue-100 rounded-full px-4 py-1 shadow">Pringy</li>
-              </ul>
+            <TestimonialsWithPhotos />
+          </div>
+        </section>
+
+        {/* SEO CONTENT */}
+        <PlombierAnnecySEO />
+
+        {/* SERVICE AREA */}
+        <section className="py-32 bg-slate-900 text-white relative overflow-hidden">
+          <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+            <Globe size={800} strokeWidth={0.5} className="absolute -top-40 -left-40 animate-slow-spin text-blue-500" />
+          </div>
+          <div className="max-w-7xl mx-auto px-6 relative z-10">
+            <div className="grid lg:grid-cols-2 gap-20 items-center">
+              <div>
+                <h2 className="text-5xl font-black mb-8">Annecy & Haute-Savoie.</h2>
+                <p className="text-xl text-slate-400 mb-12 leading-relaxed">
+                  Basés à Annecy, nous intervenons dans un rayon de 50km pour garantir
+                  une intervention rapide en moins de 30 minutes.
+                </p>
+                <div className="grid grid-cols-2 gap-6">
+                  {[
+                    "Annecy", "Thonon", "Annemasse", "Cluses",
+                    "Rumilly", "La Roche", "Sallanches", "Seynod"
+                  ].map(city => (
+                    <div key={city} className="flex items-center gap-3 text-lg font-bold">
+                      <MapPin size={20} className="text-blue-500" />
+                      {city}
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className="relative aspect-square md:aspect-video rounded-[2rem] bg-slate-800 border border-white/10 overflow-hidden group">
+                {/* Abstract Map Background */}
+                <div className="absolute inset-0 opacity-20">
+                  <svg className="w-full h-full text-blue-500" fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none">
+                    <path d="M0 0 H100 V100 H0 Z" fill="none" />
+                    <path d="M10 50 Q 30 30 50 50 T 90 50" stroke="currentColor" strokeWidth="0.5" fill="none" />
+                    <path d="M20 80 Q 40 40 60 60 T 100 20" stroke="currentColor" strokeWidth="0.5" fill="none" />
+                    <circle cx="20" cy="30" r="1" />
+                    <circle cx="60" cy="80" r="1" />
+                    <circle cx="80" cy="20" r="1" />
+                    <circle cx="90" cy="90" r="1" />
+                  </svg>
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-900/50 to-transparent" />
+                </div>
+
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="relative">
+                    {/* Pulse Effect */}
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-blue-500/30 rounded-full blur-xl animate-pulse" />
+
+                    {/* Central Card */}
+                    <div className="relative z-10 bg-slate-900/90 backdrop-blur-md p-8 rounded-3xl border border-white/10 shadow-2xl text-center transform group-hover:scale-105 transition-transform duration-500">
+                      <div className="w-16 h-16 mx-auto bg-blue-600 rounded-2xl flex items-center justify-center text-white mb-4 shadow-lg shadow-blue-600/20">
+                        <MapPin size={32} />
+                      </div>
+                      <div className="text-2xl font-black text-white mb-1">Haute-Savoie</div>
+                      <div className="text-blue-400 font-bold uppercase tracking-widest text-xs">Zone d'Intervention</div>
+                      <div className="mt-4 pt-4 border-t border-white/5 grid grid-cols-2 gap-x-4 gap-y-2 text-xs text-slate-400 font-medium text-left">
+                        <span>✓ Annecy</span>
+                        <span>✓ Thonon</span>
+                        <span>✓ Annemasse</span>
+                        <span>✓ Seynod</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* CONTACT */}
-        <motion.section
-          id="contact"
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={fadeInUp}
-          className="py-10 px-2 sm:px-4 bg-white"
-        >
-          <h2 className="text-3xl font-bold text-center mb-10 text-blue-800">Contactez-nous pour un devis rapide</h2>
-          {/* Encart premium devis gratuit */}
-          <div className="max-w-2xl mx-auto mb-8">
-            <div className="flex items-center gap-4 bg-white/40 backdrop-blur-md border border-blue-200 rounded-2xl shadow-lg px-6 py-4 justify-center">
-              <svg width="36" height="36" fill="none" viewBox="0 0 36 36" className="text-blue-600"><circle cx="18" cy="18" r="18" fill="#38bdf8" /><path d="M12 18l4 4 8-8" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
-              <div className="text-left">
-                <div className="font-bold text-blue-800 text-lg">Devis gratuit, réponse en 1h</div>
-                <div className="text-blue-700 text-sm">Recevez une estimation rapide et sans engagement.</div>
-              </div>
-            </div>
-          </div>
-          <div className="max-w-2xl mx-auto bg-white/40 backdrop-blur-md rounded-2xl shadow-2xl p-8 border border-blue-200">
-            <form className="flex flex-col gap-4">
-              <input type="text" placeholder="Votre nom" className="p-3 rounded border border-gray-300 focus:outline-blue-400 focus:ring-2 focus:ring-blue-300 transition bg-white/70" required />
-              <input type="email" placeholder="Votre email" className="p-3 rounded border border-gray-300 focus:outline-blue-400 focus:ring-2 focus:ring-blue-300 transition bg-white/70" required />
-              <input type="tel" placeholder="Votre téléphone" className="p-3 rounded border border-gray-300 focus:outline-blue-400 focus:ring-2 focus:ring-blue-300 transition bg-white/70" />
-              <textarea placeholder="Votre message" className="p-3 rounded border border-gray-300 focus:outline-blue-400 focus:ring-2 focus:ring-blue-300 transition bg-white/70" rows={4} required />
-              <input type="file" className="p-3 rounded border border-gray-300 bg-white/70" />
-              <button type="submit" className="relative inline-block px-8 py-3 rounded-full font-bold shadow-xl focus:ring-4 focus:ring-blue-300 focus:outline-none overflow-hidden group bg-gradient-to-r from-blue-500 via-blue-700 to-cyan-400 text-white text-lg tracking-wider transition-all duration-300 hover:scale-105 hover:shadow-blue-400/40 animate-glow">
-                <span className="relative z-10">Envoyer</span>
-                <span className="absolute inset-0 bg-gradient-to-r from-blue-400 via-blue-600 to-blue-400 blur-xl opacity-40 animate-pulse group-hover:opacity-80 group-hover:animate-none" />
-                <span className="absolute inset-0 rounded-full border-2 border-blue-300/40 group-hover:border-blue-400/80 transition" />
-              </button>
-            </form>
-            <div className="mt-8 text-center">
-              <p className="font-semibold">Hamza DJAFFER</p>
-              <p>Téléphone : <a href="tel:+33783167613" className="text-blue-700 font-bold hover:underline">+33 7 83 16 76 13</a></p>
-              <p>Email : <a href="mailto:watter.plomberie@gmail.com" className="text-blue-700 font-bold hover:underline">watter.plomberie@gmail.com</a></p>
-            </div>
-          </div>
-        </motion.section>
+        {/* NEWSLETTER / CTA */}
+        <NewsletterSignup />
 
-        {/* NEWSLETTER */}
-        <section className="py-16 px-2 sm:px-4 bg-gradient-to-br from-gray-50 to-blue-50">
-          <div className="max-w-4xl mx-auto">
-            <NewsletterSignup />
-          </div>
-        </section>
-
-        {/* FOOTER MODERNE */}
-        <ModernFooter />
-
-        {/* BOUTONS FLOTTANTS */}
         <FloatingActionButtons onContactClick={openModal} />
-    </div>
+      </div>
     </AnimatePresence>
   );
 }

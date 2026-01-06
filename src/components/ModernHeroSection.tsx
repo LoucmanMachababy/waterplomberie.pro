@@ -1,245 +1,213 @@
 "use client";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef, useCallback, useState, useEffect } from "react";
+import { motion, useScroll, useTransform, useMotionValue, useSpring } from "framer-motion";
+import { useRef, useState, useEffect } from "react";
+import { Phone, Clock, ChevronRight, Award, ShieldCheck, Heart, Zap } from "lucide-react";
 
 interface ModernHeroSectionProps {
   onContactClick: () => void;
 }
 
+// Scramble Text Effect Component
+const ScrambleText = ({ text }: { text: string }) => {
+  const [display, setDisplay] = useState(text);
+  const chars = "!@#$%^&*()_+-=[]{}|;:,.<>?";
+
+  useEffect(() => {
+    let interval: NodeJS.Timeout;
+    let iteration = 0;
+
+    interval = setInterval(() => {
+      setDisplay(
+        text
+          .split("")
+          .map((letter, index) => {
+            if (index < iteration) return letter;
+            return chars[Math.floor(Math.random() * chars.length)];
+          })
+          .join("")
+      );
+
+      if (iteration >= text.length) clearInterval(interval);
+      iteration += 1 / 3;
+    }, 30);
+
+    return () => clearInterval(interval);
+  }, [text]);
+
+  return <span className="text-gradient">{display}</span>;
+};
+
 export default function ModernHeroSection({ onContactClick }: ModernHeroSectionProps) {
   const heroRef = useRef(null);
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [isTyping, setIsTyping] = useState(true);
-  const [isMounted, setIsMounted] = useState(false);
+
+  // 3D Mouse Movement Effect
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+  const mouseX = useSpring(x, { stiffness: 50, damping: 20 });
+  const mouseY = useSpring(y, { stiffness: 50, damping: 20 });
+
+  function handleMouseMove(event: React.MouseEvent) {
+    const { clientX, clientY } = event;
+    const { innerWidth, innerHeight } = window;
+    x.set((clientX / innerWidth - 0.5) * -50); // Invert for parallax
+    y.set((clientY / innerHeight - 0.5) * -50);
+  }
 
   const { scrollY } = useScroll();
-  const y = useTransform(scrollY, [0, 500], ["0px", "150px"]);
-  const opacity = useTransform(scrollY, [0, 300], [1, 0]);
-
-  // Positions fixes pour éviter l'hydratation mismatch
-  const particlePositions = [
-    { left: 10, top: 20 }, { left: 25, top: 60 }, { left: 45, top: 15 },
-    { left: 60, top: 80 }, { left: 75, top: 35 }, { left: 90, top: 70 },
-    { left: 15, top: 90 }, { left: 35, top: 45 }, { left: 55, top: 25 },
-    { left: 80, top: 55 }, { left: 20, top: 75 }, { left: 70, top: 10 },
-    { left: 40, top: 85 }, { left: 85, top: 40 }, { left: 30, top: 65 },
-    { left: 65, top: 30 }, { left: 50, top: 95 }, { left: 95, top: 50 },
-    { left: 5, top: 40 }, { left: 12, top: 85 }
-  ];
-
-  // Effet de parallaxe avec la souris
-  const handleMouseMove = useCallback((e: React.MouseEvent) => {
-    const rect = (e.currentTarget as HTMLElement).getBoundingClientRect();
-    setMousePosition({
-      x: (e.clientX - rect.left - rect.width / 2) / 20,
-      y: (e.clientY - rect.top - rect.height / 2) / 20,
-    });
-  }, []);
-
-  // Animation de typing et montage
-  useEffect(() => {
-    setIsMounted(true);
-    const timer = setTimeout(() => setIsTyping(false), 3500);
-    return () => clearTimeout(timer);
-  }, []);
+  const y1 = useTransform(scrollY, [0, 500], [0, 200]);
+  const opacity = useTransform(scrollY, [0, 400], [1, 0]);
+  const scale = useTransform(scrollY, [0, 400], [1, 0.9]);
 
   return (
-    <section 
+    <section
       ref={heroRef}
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
       onMouseMove={handleMouseMove}
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-slate-950 perspective-1000"
     >
-      {/* Background avec gradient animé */}
-      <div className="absolute inset-0 gradient-animated opacity-90" />
-      
-      {/* Image de fond avec parallaxe */}
-      <motion.div
-        style={{ y }}
-        className="absolute inset-0 z-0"
-      >
-        <img
-          src="/service2.jpg"
-          alt="Salle de bain rénovée par Water Plomberie"
-          className="object-cover w-full h-full opacity-30"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-blue-900/50 via-blue-800/30 to-cyan-900/50" />
-      </motion.div>
-
-      {/* Particules flottantes */}
-      {isMounted && (
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          {particlePositions.map((pos, i) => (
-            <motion.div
-              key={i}
-              className="absolute w-2 h-2 bg-white rounded-full opacity-20"
-              style={{
-                left: `${pos.left}%`,
-                top: `${pos.top}%`,
-              }}
-              animate={{
-                y: [0, -30, 0],
-                opacity: [0.2, 0.8, 0.2],
-                scale: [1, 1.5, 1],
-              }}
-              transition={{
-                duration: 3 + (i % 3),
-                repeat: Infinity,
-                ease: "easeInOut",
-                delay: i * 0.2,
-              }}
-            />
-          ))}
-        </div>
-      )}
-
-      {/* Contenu principal */}
-      <motion.div
-        style={{ opacity }}
-        className="relative z-10 text-center px-4 max-w-6xl mx-auto"
-      >
-        {/* Logo avec effet de glow */}
+      {/* Dynamic Background Elements */}
+      <div className="absolute inset-0 z-0 select-none pointer-events-none">
         <motion.div
-          className="mb-8"
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          style={{
-            transform: `translate(${mousePosition.x}px, ${mousePosition.y}px)`,
-          }}
+          style={{ x: mouseX, y: mouseY, scale: 1.1 }}
+          className="absolute inset-0 opacity-30"
         >
-          <div className="relative inline-block">
-            <div className="absolute inset-0 bg-white rounded-full blur-xl opacity-50 animate-pulse" />
-            <img 
-              src="/logo.png" 
-              alt="Water Plomberie Logo" 
-              className="relative w-24 h-24 mx-auto rounded-full shadow-2xl bg-white/90 p-2"
-            />
-          </div>
-        </motion.div>
-
-        {/* Titre principal avec effet de typing */}
-        <motion.h1
-          className={`text-4xl md:text-6xl lg:text-7xl font-extrabold mb-6 text-white drop-shadow-2xl ${isTyping ? 'typing-effect' : ''}`}
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3, duration: 0.8 }}
-        >
-          <span className="gradient-text bg-gradient-to-r from-white via-blue-100 to-cyan-200 bg-clip-text text-transparent">
-            Plombier Annecy ⭐ #1
-          </span>
-        </motion.h1>
-
-        {/* Sous-titre */}
-        <motion.p
-          className="text-xl md:text-2xl mb-4 text-blue-100 font-medium"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6, duration: 0.8 }}
-        >
-          LE Plombier de Référence à Annecy
-        </motion.p>
-
-        {/* Description */}
-        <motion.p
-          className="text-lg md:text-xl mb-8 text-blue-200 max-w-3xl mx-auto leading-relaxed"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.9, duration: 0.8 }}
-        >
-          <strong>Water Plomberie</strong> - Votre plombier Annecy expert depuis 7 ans.
-          Urgence 24/7, devis gratuit, intervention rapide partout à Annecy et Haute-Savoie.
-        </motion.p>
-
-        {/* Boutons d'action */}
-        <motion.div
-          className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.2, duration: 0.8 }}
-        >
-          {/* Bouton principal */}
-          <motion.button
-            onClick={onContactClick}
-            className="group relative px-8 py-4 bg-white/20 backdrop-blur-lg border-2 border-white/40 text-white font-bold text-lg rounded-full shadow-2xl transition-all duration-300 overflow-hidden"
-            whileHover={{ 
-              scale: 1.05,
-              boxShadow: "0 20px 40px rgba(255,255,255,0.2)"
-            }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <span className="relative z-10 flex items-center gap-2">
-              💧 Devis gratuit en 1 min
-            </span>
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            <div className="absolute inset-0 bg-white/10 group-hover:bg-white/20 transition-colors duration-300" />
-          </motion.button>
-
-          {/* Bouton urgence */}
-          <motion.a
-            href="tel:+33783167613"
-            className="group relative px-8 py-4 bg-red-500/90 backdrop-blur-lg border-2 border-red-400 text-white font-bold text-lg rounded-full shadow-2xl transition-all duration-300 pulse-glow"
-            whileHover={{ 
-              scale: 1.05,
-              boxShadow: "0 20px 40px rgba(239, 68, 68, 0.4)"
-            }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <span className="relative z-10 flex items-center gap-2">
-              🚨 Urgence 24/7
-            </span>
-          </motion.a>
-        </motion.div>
-
-        {/* Statistiques */}
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.5, duration: 0.8 }}
-        >
-          {[
-            { number: "150+", label: "Clients satisfaits", icon: "👥" },
-            { number: "7 ans", label: "D'expérience", icon: "🏆" },
-            { number: "24/7", label: "Service d'urgence", icon: "⚡" }
-          ].map((stat, index) => (
-            <motion.div
-              key={index}
-              className="glass-card p-6 text-center"
-              whileHover={{ 
-                scale: 1.05,
-                boxShadow: "0 20px 40px rgba(255,255,255,0.1)"
-              }}
-              style={{
-                transform: `translate(${mousePosition.x * 0.5}px, ${mousePosition.y * 0.5}px)`,
-              }}
-            >
-              <div className="text-3xl mb-2">{stat.icon}</div>
-              <div className="text-2xl font-bold text-white mb-1">{stat.number}</div>
-              <div className="text-blue-200 text-sm">{stat.label}</div>
-            </motion.div>
-          ))}
-        </motion.div>
-      </motion.div>
-
-      {/* Indicateur de scroll */}
-      <motion.div
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 2, duration: 0.8 }}
-      >
-        <motion.div
-          className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center"
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-        >
-          <motion.div
-            className="w-1 h-3 bg-white rounded-full mt-2"
-            animate={{ opacity: [1, 0, 1] }}
-            transition={{ duration: 2, repeat: Infinity }}
+          <img
+            src="/service2.jpg"
+            alt="Background"
+            className="object-cover w-full h-full blur-[3px]"
           />
         </motion.div>
-        <p className="text-white/70 text-sm mt-2">Scroll</p>
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/90 via-slate-950/50 to-slate-950" />
+
+        {/* Animated Glows */}
+        <motion.div
+          animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
+          transition={{ duration: 8, repeat: Infinity }}
+          className="absolute top-1/4 -left-20 w-[500px] h-[500px] bg-blue-600/20 rounded-full blur-[120px]"
+        />
+        <motion.div
+          animate={{ scale: [1.2, 1, 1.2], opacity: [0.3, 0.5, 0.3] }}
+          transition={{ duration: 8, repeat: Infinity, delay: 1 }}
+          className="absolute bottom-1/4 -right-20 w-[600px] h-[600px] bg-cyan-600/10 rounded-full blur-[120px]"
+        />
+      </div>
+
+      <motion.div
+        style={{ opacity, scale }}
+        className="relative z-10 container mx-auto px-6 pt-20"
+      >
+        <div className="max-w-5xl mx-auto text-center relative">
+
+          {/* Tagline Badge with Glitch Effect on Hover */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-8 hover:bg-white/10 transition-colors cursor-crosshair group"
+          >
+            <Zap size={16} className="text-yellow-400 group-hover:animate-ping" />
+            <span className="text-xs font-bold tracking-[0.2em] uppercase text-slate-300 group-hover:text-white transition-colors">
+              Expert Plombier Certifié
+            </span>
+          </motion.div>
+
+          {/* Main Title with Scramble Effect */}
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-5xl md:text-8xl font-black text-white leading-tight tracking-tighter mb-8"
+          >
+            PLOMBIER EXPERT <br />
+            <ScrambleText text="À ANNECY" />
+          </motion.h1>
+
+          {/* Subtitle */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="text-lg md:text-2xl text-slate-300 mb-12 max-w-3xl mx-auto leading-relaxed font-medium"
+          >
+            Intervention <strong>24/7 en 30 minutes</strong>. Dépannage fuite, chauffage et rénovation de salle de bain.
+            <strong>Devis gratuit</strong> et tarifs transparents.
+          </motion.p>
+
+          {/* Action Buttons with Magnetic Feel */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="flex flex-col sm:flex-row gap-6 justify-center items-center"
+          >
+            <button
+              onClick={onContactClick}
+              className="group relative px-10 py-6 bg-blue-600 rounded-3xl text-white font-black text-xl shadow-[0_0_40px_-10px_rgba(37,99,235,0.5)] overflow-hidden transition-all hover:scale-105 hover:shadow-[0_0_60px_-15px_rgba(37,99,235,0.6)]"
+            >
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <span className="relative z-10 flex items-center gap-3">
+                Prendre Rendez-vous
+                <ChevronRight size={24} className="transition-transform group-hover:translate-x-2" />
+              </span>
+            </button>
+
+            <a
+              href="tel:+33783167613"
+              className="group flex items-center gap-5 px-10 py-6 rounded-3xl border border-white/5 bg-slate-900/50 backdrop-blur-md text-white font-bold text-lg transition-all hover:bg-white/10 hover:border-white/20 active:scale-95"
+            >
+              <div className="relative">
+                <div className="absolute inset-0 bg-green-500 rounded-xl blur-lg opacity-20 group-hover:opacity-40 transition-opacity" />
+                <div className="w-12 h-12 rounded-xl bg-slate-800 flex items-center justify-center text-green-400 relative z-10 border border-white/5">
+                  <Phone size={24} />
+                </div>
+              </div>
+              <div className="flex flex-col items-start leading-none gap-1">
+                <span className="text-xs text-slate-500 font-bold uppercase tracking-widest group-hover:text-slate-300 transition-colors">Urgence 24/7</span>
+                <span className="text-xl tracking-wide font-mono">07 83 16 76 13</span>
+              </div>
+            </a>
+          </motion.div>
+
+          {/* Social Proof Section */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 1 }}
+            className="mt-24 pt-10 border-t border-white/5 flex flex-wrap justify-center gap-12 md:gap-24 opacity-60 hover:opacity-100 transition-opacity duration-500"
+          >
+            {[
+              { icon: Award, top: "150+", sub: "Projets Réalisés" },
+              { icon: Heart, top: "5/5", sub: "Satisfaction" },
+              { icon: Clock, top: "20m", sub: "Intervention Moy." }
+            ].map((stat, i) => (
+              <div key={i} className="flex items-center gap-4 group cursor-default">
+                <stat.icon className="text-slate-600 group-hover:text-blue-500 transition-colors duration-500" size={32} />
+                <div className="text-left">
+                  <div className="text-white font-black text-2xl leading-none mb-1">{stat.top}</div>
+                  <div className="text-slate-500 text-xs font-bold uppercase tracking-wider">{stat.sub}</div>
+                </div>
+              </div>
+            ))}
+          </motion.div>
+        </div>
+      </motion.div>
+
+      {/* Floating 3D Card - Fixed Notification */}
+      <motion.div
+        style={{ x: useTransform(mouseX, val => val * 0.8), y: useTransform(mouseY, val => val * 0.8) }}
+        className="absolute bottom-10 right-10 hidden 2xl:block z-30"
+      >
+        <div className="w-72 p-6 bg-slate-900/80 backdrop-blur-xl rounded-[2rem] border border-white/10 shadow-2xl flex items-center gap-4 transform hover:scale-105 transition-transform duration-300 cursor-pointer group">
+          <div className="relative">
+            <div className="absolute inset-0 bg-blue-500 rounded-full blur-lg opacity-40 group-hover:opacity-70 transition-opacity" />
+            <div className="w-14 h-14 rounded-full bg-blue-600 flex items-center justify-center text-white relative z-10">
+              <ShieldCheck size={28} />
+            </div>
+          </div>
+          <div>
+            <div className="text-white font-bold text-lg">Service Premium</div>
+            <div className="text-blue-400 text-xs font-bold uppercase tracking-widest">Satisfaction Totale</div>
+          </div>
+        </div>
       </motion.div>
     </section>
   );
