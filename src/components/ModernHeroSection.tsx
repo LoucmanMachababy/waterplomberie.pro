@@ -115,10 +115,10 @@ export default function ModernHeroSection({ onContactClick }: ModernHeroSectionP
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-5xl md:text-8xl font-black text-white leading-tight tracking-tighter mb-6"
+            className="text-4xl md:text-7xl lg:text-8xl font-black text-white leading-tight tracking-tighter mb-6"
           >
             PLOMBIER EXPERT <br />
-            <ScrambleText text="À ANNECY" />
+            <span className="text-gradient">A ANNECY</span>
           </motion.h1>
 
           {/* Subtitle - Simplified & Bulleted */}

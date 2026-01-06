@@ -33,15 +33,15 @@ export default function Header() {
           }`}
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-3 transition-transform hover:scale-105">
-            <div className="relative w-12 h-12 bg-white/90 backdrop-blur-sm rounded-xl flex items-center justify-center shadow-lg overflow-hidden border border-white/20">
-              <img src="/logo.png" alt="Water Plomberie" className="w-10 h-10 object-contain" />
+          <Link href="/" className="flex items-center gap-2 md:gap-3 transition-transform hover:scale-105">
+            <div className="relative w-10 h-10 md:w-12 md:h-12 bg-white/90 backdrop-blur-sm rounded-xl flex items-center justify-center shadow-lg overflow-hidden border border-white/20">
+              <img src="/logo.png" alt="Water Plomberie" className="w-8 h-8 md:w-10 md:h-10 object-contain" />
             </div>
             <div className="flex flex-col">
-              <span className={`font-black text-xl tracking-tight leading-none ${isScrolled ? "text-slate-900 dark:text-white" : "text-white"}`}>
+              <span className={`font-black text-lg md:text-xl tracking-tight leading-none ${isScrolled ? "text-slate-900 dark:text-white" : "text-white"}`}>
                 WATER<span className="text-blue-500">.</span>
               </span>
-              <span className={`text-[10px] font-bold tracking-[0.2em] uppercase ${isScrolled ? "text-slate-500" : "text-blue-200"}`}>
+              <span className={`hidden sm:block text-[10px] font-bold tracking-[0.2em] uppercase ${isScrolled ? "text-slate-500" : "text-blue-200"}`}>
                 Plomberie
               </span>
             </div>
@@ -61,7 +61,7 @@ export default function Header() {
             ))}
           </nav>
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2 md:gap-4">
             <ThemeToggle />
             <Link
               href="tel:+33783167613"
@@ -76,10 +76,11 @@ export default function Header() {
 
             <Link
               href="/urgence"
-              className="px-5 py-2.5 rounded-full bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold shadow-lg shadow-blue-600/20 transition-luxury hover:scale-105 flex items-center gap-2"
+              className="px-3 py-2 md:px-5 md:py-2.5 rounded-full bg-blue-600 hover:bg-blue-700 text-white text-xs md:text-sm font-bold shadow-lg shadow-blue-600/20 transition-luxury hover:scale-105 flex items-center gap-1 md:gap-2"
             >
-              <ShieldCheck size={16} />
-              <span>Intervention</span>
+              <Clock size={14} className="md:w-4 md:h-4" />
+              <span className="hidden sm:inline">Intervention</span>
+              <span className="sm:hidden">Urgence</span>
             </Link>
 
             <button
@@ -103,7 +104,7 @@ export default function Header() {
             transition={{ type: "spring", damping: 25, stiffness: 200 }}
             className="fixed inset-0 z-[60] bg-white dark:bg-slate-950 flex flex-col"
           >
-            <div className="p-6 flex items-center justify-between border-b border-slate-100 dark:border-slate-900">
+            <div className="p-6 flex items-center justify-between border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950">
               <div className="flex items-center gap-3">
                 <div className="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center">
                   <img src="/logo.png" alt="Logo" className="w-6 h-6 brightness-0 invert" />
