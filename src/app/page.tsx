@@ -38,12 +38,12 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-5xl md:text-7xl font-black mb-8 tracking-tighter">
-                Services <span className="text-blue-600">Premium</span>
+              <h2 className="text-4xl md:text-6xl font-black mb-6 tracking-tight text-slate-900 dark:text-white">
+                Nos Domaines d'<span className="text-blue-600">Expertise</span>
               </h2>
-              <p className="text-xl text-slate-500 max-w-2xl mx-auto leading-relaxed font-medium">
-                Une expertise technique rigoureuse associée à un service client irréprochable.
-                Nous intervenons sur tous vos projets avec la même exigence de qualité.
+              <p className="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed">
+                Intervention rapide pour les urgences, ou accompagnement complet pour vos projets de rénovation.
+                Un seul interlocuteur pour tous vos travaux de plomberie.
               </p>
             </motion.div>
 
@@ -99,7 +99,7 @@ export default function Home() {
         {/* ABOUT SECTION */}
         <section id="a-propos" className="py-32 bg-slate-50 dark:bg-slate-900/50">
           <div className="max-w-7xl mx-auto px-6">
-            <div className="grid lg:grid-cols-2 gap-20 items-center">
+            <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -111,24 +111,23 @@ export default function Home() {
                     L'Artisanat d'Excellence
                   </span>
                 </div>
-                <h2 className="text-4xl md:text-6xl font-black mb-8 leading-tight">
+                <h2 className="text-3xl md:text-5xl font-black mb-6 leading-tight text-slate-900 dark:text-white">
                   Hamza DJAFFER,<br />
                   <span className="text-slate-400">Votre Expert de Confiance.</span>
                 </h2>
-                <p className="text-xl text-slate-500 mb-8 leading-relaxed">
-                  Plombier certifié avec plus de 7 ans d'expérience en Haute-Savoie.
-                  Je m'engage personnellement à offrir un service rapide, durable et transparent.
+                <p className="text-lg text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
+                  Plombier certifié à <strong>Annecy</strong> (74). Plus de <strong>7 ans d'expérience</strong> en dépannage urgent et rénovation.
                 </p>
-                <div className="space-y-4 mb-10">
+                <div className="space-y-3 mb-8">
                   {[
                     "Diplôme d'Expertise Technique",
                     "Assurances & Responsabilité Civile",
-                    "Matériel de pointe (Camera thermique, Détection acoustique)",
+                    "Matériel de pointe (Camera thermique)",
                     "Devis transparent et sans surprise"
                   ].map((item, i) => (
-                    <div key={i} className="flex items-center gap-4 text-lg font-semibold">
-                      <div className="w-6 h-6 rounded-full bg-blue-500 flex items-center justify-center text-white">
-                        <CheckCircle2 size={14} />
+                    <div key={i} className="flex items-center gap-3 text-base md:text-lg font-semibold text-slate-700 dark:text-slate-300">
+                      <div className="w-5 h-5 rounded-full bg-blue-500 flex items-center justify-center text-white shrink-0">
+                        <CheckCircle2 size={12} />
                       </div>
                       {item}
                     </div>
@@ -136,7 +135,7 @@ export default function Home() {
                 </div>
                 <button
                   onClick={openModal}
-                  className="px-8 py-4 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-2xl font-bold text-lg hover:scale-105 transition-all shadow-xl"
+                  className="w-full md:w-auto px-8 py-4 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-2xl font-bold text-lg hover:scale-105 transition-all shadow-xl"
                 >
                   Me contacter directement
                 </button>
@@ -146,14 +145,22 @@ export default function Home() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                className="relative"
+                className="relative mt-8 lg:mt-0"
               >
-                <div className="aspect-square rounded-[3rem] overflow-hidden rotate-3 shadow-2xl">
-                  <img src="/service2.jpg" alt="Expertise Plomberie" className="w-full h-full object-cover" />
+                <div className="aspect-square rounded-[2rem] md:rounded-[3rem] overflow-hidden rotate-3 shadow-2xl">
+                  {/* Optimized image loading for SEO/Speed */}
+                  <img
+                    src="/service2.jpg"
+                    alt="Hamza Djaffer - Plombier Expert Annecy"
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                    width="600"
+                    height="600"
+                  />
                 </div>
-                <div className="absolute -bottom-10 -left-10 w-48 h-48 bg-blue-600 rounded-full flex flex-col items-center justify-center text-white p-6 shadow-2xl -rotate-12 border-4 border-white dark:border-slate-900">
-                  <span className="text-4xl font-black">7+</span>
-                  <span className="text-xs font-bold uppercase tracking-tighter text-center">Années d'Expertise Terrain</span>
+                <div className="absolute -bottom-6 -left-6 md:-bottom-10 md:-left-10 w-32 h-32 md:w-48 md:h-48 bg-blue-600 rounded-full flex flex-col items-center justify-center text-white p-4 md:p-6 shadow-2xl -rotate-12 border-4 border-white dark:border-slate-900">
+                  <span className="text-2xl md:text-4xl font-black">7+</span>
+                  <span className="text-[10px] md:text-xs font-bold uppercase tracking-tighter text-center">Années d'Expertise</span>
                 </div>
               </motion.div>
             </div>

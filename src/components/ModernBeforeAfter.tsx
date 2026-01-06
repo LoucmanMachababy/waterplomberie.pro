@@ -15,20 +15,20 @@ interface BeforeAfterItem {
 
 const beforeAfterData: BeforeAfterItem[] = [
   {
-    id: "salle-bain",
-    title: "Rénovation Master Bath",
+    id: "salle-bain-annecy",
+    title: "Rénovation Salle de Bain Annecy",
     beforeImage: "/salledebainavant.jpeg",
     afterImage: "/service2.jpg",
-    description: "Transformation complète d'un espace daté en une suite parentale moderne avec des finitions haut de gamme.",
+    description: "Transformation complète d'une salle de bain à Annecy-le-Vieux : douche à l'italienne, vasque moderne et finitions haut de gamme.",
     location: "Annecy-le-Vieux",
     duration: "3 jours"
   },
   {
-    id: "toilette",
-    title: "Modernisation Sanitaire",
+    id: "wc-suspendu-seynod",
+    title: "Installation WC Suspendu Seynod",
     beforeImage: "/AVANTTOILETTE.jpeg",
     afterImage: "/aprestoilette.jpeg",
-    description: "Installation d'un pack WC suspendu avec intégration invisible et carrelage grand format.",
+    description: "Modernisation des toilettes avec pose d'un bâti-support Geberit et habillage carrelage grand format. Intervention rapide.",
     location: "Seynod",
     duration: "1 jour"
   }
@@ -45,28 +45,28 @@ function BeforeAfterSlider({ item }: { item: BeforeAfterItem }) {
       viewport={{ once: true }}
       className="bg-white dark:bg-slate-900 rounded-[3rem] overflow-hidden border border-slate-200 dark:border-white/5 shadow-2xl group"
     >
-      <div className="p-10">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-8">
+      <div className="p-6 md:p-8">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-6">
           <div>
-            <h3 className="text-3xl font-black mb-2 tracking-tight">{item.title}</h3>
-            <p className="text-slate-500 font-medium">{item.description}</p>
+            <h3 className="text-xl md:text-2xl font-black mb-2 tracking-tight text-slate-900 dark:text-white">{item.title}</h3>
+            <p className="text-sm md:text-base text-slate-500 font-medium max-w-lg">{item.description}</p>
           </div>
           <div className="flex gap-4">
-            <div className="px-4 py-2 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-white/5 flex items-center gap-2 text-sm font-bold">
-              <MapPin size={16} className="text-blue-500" />
+            <div className="px-3 py-1.5 rounded-lg bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-white/5 flex items-center gap-2 text-xs font-bold text-slate-700 dark:text-slate-300">
+              <MapPin size={14} className="text-blue-500" />
               {item.location}
             </div>
-            <div className="px-4 py-2 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-white/5 flex items-center gap-2 text-sm font-bold">
-              <Clock size={16} className="text-blue-500" />
+            <div className="px-3 py-1.5 rounded-lg bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-white/5 flex items-center gap-2 text-xs font-bold text-slate-700 dark:text-slate-300">
+              <Clock size={14} className="text-blue-500" />
               {item.duration}
             </div>
           </div>
         </div>
 
-        <div className="relative aspect-[16/10] rounded-[2rem] overflow-hidden shadow-inner cursor-ew-resize select-none">
+        <div className="relative aspect-video rounded-2xl overflow-hidden shadow-inner cursor-ew-resize select-none">
           {/* Background Images */}
           <div className="absolute inset-0">
-            <img src={item.afterImage} alt="After" loading="lazy" className="w-full h-full object-cover" />
+            <img src={item.afterImage} alt={`Après ${item.title} - Water Plomberie`} loading="lazy" className="w-full h-full object-cover" />
           </div>
 
           <div
@@ -75,7 +75,7 @@ function BeforeAfterSlider({ item }: { item: BeforeAfterItem }) {
           >
             <img
               src={item.beforeImage}
-              alt="Before"
+              alt={`Avant ${item.title} - Water Plomberie`}
               loading="lazy"
               className="absolute top-0 left-0 w-full h-full object-cover max-w-none"
               style={{ width: `calc(100% * 100 / ${sliderValue})` }}
@@ -149,7 +149,7 @@ export default function ModernBeforeAfter() {
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {beforeAfterData.map((item) => (
             <BeforeAfterSlider key={item.id} item={item} />
           ))}

@@ -34,15 +34,15 @@ export default function ModernFooter() {
           {/* Brand Identity */}
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center gap-3 mb-8 group">
-              <div className="relative w-12 h-12 rounded-2xl bg-blue-600 flex items-center justify-center overflow-hidden shadow-lg shadow-blue-500/20 group-hover:scale-110 transition-transform">
-                <img src="/logo.png" alt="Logo" className="w-10 h-10 object-contain brightness-0 invert" />
+              <div className="relative w-16 h-16 rounded-2xl bg-white/10 flex items-center justify-center overflow-hidden shadow-lg border border-white/20 group-hover:scale-110 transition-transform">
+                <img src="/logo.png" alt="Plombier Annecy - Water Plomberie Logo" className="w-12 h-12 object-contain brightness-0 invert" />
               </div>
               <div className="flex flex-col">
-                <span className="font-bold text-2xl tracking-tight leading-none">
+                <span className="font-bold text-2xl tracking-tight leading-none text-white">
                   WATER<span className="text-blue-500">.</span>
                 </span>
                 <span className="text-[12px] font-medium tracking-[0.2em] uppercase text-slate-500">
-                  Engineering Solutions
+                  Plomberie Annecy
                 </span>
               </div>
             </Link>

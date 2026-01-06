@@ -125,3 +125,21 @@ body {
 .swiper-pagination-bullet-active {
   background: #3b82f6 !important;
 }
+
+/* Cursor Pointer for Interactive Elements */
+button,
+a,
+[role="button"],
+input[type="submit"],
+input[type="button"],
+input[type="checkbox"],
+input[type="radio"],
+select,
+.cursor-pointer {
+  cursor: pointer;
+}
+
+button:disabled,
+a[disabled] {
+  cursor: not-allowed;
+}
