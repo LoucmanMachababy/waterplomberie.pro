@@ -34,9 +34,10 @@ export default function Home() {
           <div className="max-w-7xl mx-auto">
             <motion.div
               className="text-center mb-24"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.4 }}
             >
               <h2 className="text-4xl md:text-6xl font-black mb-6 tracking-tight text-slate-900 dark:text-white">
                 Nos Domaines d'<span className="text-blue-600">Expertise</span>
@@ -101,9 +102,10 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-6">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
               <motion.div
-                initial={{ opacity: 0, x: -50 }}
+                initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.5 }}
               >
                 <div className="relative inline-block mb-6">
                   <div className="absolute inset-0 bg-blue-500 rounded-2xl blur-2xl opacity-20" />
@@ -142,9 +144,10 @@ export default function Home() {
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
+                initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.5 }}
                 className="relative mt-8 lg:mt-0"
               >
                 <div className="aspect-square rounded-[2rem] md:rounded-[3rem] overflow-hidden rotate-3 shadow-2xl">
