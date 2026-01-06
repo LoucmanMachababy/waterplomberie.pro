@@ -118,7 +118,7 @@ export default function ModernHeroSection({ onContactClick }: ModernHeroSectionP
             className="text-4xl md:text-7xl lg:text-8xl font-black text-white leading-tight tracking-tighter mb-6"
           >
             PLOMBIER EXPERT <br />
-            <span className="text-gradient">A ANNECY</span>
+            <span className="text-gradient inline-block mt-2 md:mt-0">&Agrave; ANNECY</span>
           </motion.h1>
 
           {/* Subtitle - Simplified & Bulleted */}
