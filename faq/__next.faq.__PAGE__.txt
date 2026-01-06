@@ -1,6 +1,6 @@
 1:"$Sreact.fragment"
-2:I[56070,["/_next/static/chunks/2cf7a8054fbedcff.js","/_next/static/chunks/d71fbb4ea529ba6c.js","/_next/static/chunks/2544c15c99bb1426.js"],"default"]
+2:I[56070,["/_next/static/chunks/0dedbd3c5a838025.js","/_next/static/chunks/d71fbb4ea529ba6c.js","/_next/static/chunks/2544c15c99bb1426.js"],"default"]
 3:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/7340adf74ff47ec0.js"],"OutletBoundary"]
 4:"$Sreact.suspense"
-0:{"buildId":"f-hvpI3SwN1vEMCF297xP","rsc":["$","$1","c",{"children":[["$","div",null,{"className":"min-h-screen bg-gradient-to-br from-blue-50 to-white py-16 px-4","children":[["$","h1",null,{"className":"text-4xl font-bold text-center text-blue-800 mb-10","children":"FAQ - Questions fréquentes"}],["$","$L2",null,{}]]}],[["$","script","script-0",{"src":"/_next/static/chunks/2544c15c99bb1426.js","async":true}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"loading":null,"isPartial":false}
+0:{"buildId":"pH0GP2kfwHPb7YgpkHjW8","rsc":["$","$1","c",{"children":[["$","div",null,{"className":"min-h-screen bg-gradient-to-br from-blue-50 to-white py-16 px-4","children":[["$","h1",null,{"className":"text-4xl font-bold text-center text-blue-800 mb-10","children":"FAQ - Questions fréquentes"}],["$","$L2",null,{}]]}],[["$","script","script-0",{"src":"/_next/static/chunks/2544c15c99bb1426.js","async":true}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"loading":null,"isPartial":false}
 5:null
