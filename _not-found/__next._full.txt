@@ -1,0 +1,127 @@
+1:"$Sreact.fragment"
+2:I[79520,["/_next/static/chunks/c7d1ddf2c8d665ec.js","/_next/static/chunks/d71fbb4ea529ba6c.js"],""]
+a:I[68027,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/7340adf74ff47ec0.js"],"default"]
+:HL["/_next/static/chunks/4a9332a13ca6dc17.css","style"]
+3:Tdda,
+            {
+              "@context": "https://schema.org",
+              "@type": "Plumber",
+              "name": "Water Plomberie",
+              "alternateName": "Water Plomberie Annecy",
+              "image": [
+                "https://www.waterplomberie.pro/logo.png",
+                "https://www.waterplomberie.pro/service2.jpg"
+              ],
+              "logo": "https://www.waterplomberie.pro/logo.png",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Annecy",
+                "addressRegion": "Haute-Savoie",
+                "postalCode": "74000",
+                "addressCountry": "FR"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": "45.8992",
+                "longitude": "6.1294"
+              },
+              "telephone": "+33 7 83 16 76 13",
+              "email": "watter.plomberie@gmail.com",
+              "url": "https://www.waterplomberie.pro/",
+              "areaServed": [
+                {
+                  "@type": "City",
+                  "name": "Annecy"
+                },
+                {
+                  "@type": "City",
+                  "name": "Thonon-les-Bains"
+                },
+                {
+                  "@type": "City",
+                  "name": "Annemasse"
+                },
+                {
+                  "@type": "City",
+                  "name": "Cluses"
+                },
+                {
+                  "@type": "City",
+                  "name": "Rumilly"
+                },
+                {
+                  "@type": "City",
+                  "name": "La Roche-sur-Foron"
+                }
+              ],
+              "description": "Plombier professionnel à Annecy et Haute-Savoie : urgence 24/7, chauffage, sanitaire, rénovation salle de bain. 7 ans d'expérience.",
+              "founder": {
+                "@type": "Person",
+                "name": "Hamza DJAFFER"
+              },
+              "openingHours": "Mo-Su 00:00-23:59",
+              "serviceType": [
+                "Plomberie d'urgence 24/7",
+                "Installation sanitaire",
+                "Réparation chauffage",
+                "Rénovation salle de bain",
+                "Dépannage plomberie"
+              ],
+              "priceRange": "€€",
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "5",
+                "reviewCount": "3"
+              },
+              "review": [
+                {
+                  "@type": "Review",
+                  "author": {
+                    "@type": "Person",
+                    "name": "Mohamed BEN AMAR"
+                  },
+                  "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5"
+                  },
+                  "reviewBody": "Hamza a été incroyablement réactif lors de mon problème de fuite. Un vrai professionnel !"
+                },
+                {
+                  "@type": "Review",
+                  "author": {
+                    "@type": "Person",
+                    "name": "Lucas DELACROIX"
+                  },
+                  "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5"
+                  },
+                  "reviewBody": "Je recommande Water Plomberie. Leur service d'urgence m'a permis de régler une panne de chauffage en plein hiver."
+                }
+              ]
+            }
+          0:{"P":null,"b":"WAxpuhKzh2ftfdBLR778m","c":["","_not-found",""],"q":"","i":false,"f":[[["",{"children":["/_not-found",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/4a9332a13ca6dc17.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/_next/static/chunks/c7d1ddf2c8d665ec.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/_next/static/chunks/d71fbb4ea529ba6c.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"fr","children":[["$","head",null,{"children":["$","$L2",null,{"id":"schema-localbusiness","type":"application/ld+json","children":"$3"}]}],"$L4"]}]]}],{"children":["$L5",{"children":["$L6",{},null,false,false]},null,false,false]},["$L7",[],["$L8"]],false,false],"$L9",false]],"m":"$undefined","G":["$a","$undefined"],"S":true}
+b:I[59919,["/_next/static/chunks/c7d1ddf2c8d665ec.js","/_next/static/chunks/d71fbb4ea529ba6c.js"],"ThemeProvider"]
+c:I[90236,["/_next/static/chunks/c7d1ddf2c8d665ec.js","/_next/static/chunks/d71fbb4ea529ba6c.js"],"default"]
+d:I[86312,["/_next/static/chunks/c7d1ddf2c8d665ec.js","/_next/static/chunks/d71fbb4ea529ba6c.js"],"default"]
+e:I[2971,["/_next/static/chunks/c7d1ddf2c8d665ec.js","/_next/static/chunks/d71fbb4ea529ba6c.js"],"default"]
+f:I[39756,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/7340adf74ff47ec0.js"],"default"]
+10:I[37457,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/7340adf74ff47ec0.js"],"default"]
+11:I[19383,["/_next/static/chunks/c7d1ddf2c8d665ec.js","/_next/static/chunks/d71fbb4ea529ba6c.js"],"default"]
+12:I[40244,["/_next/static/chunks/c7d1ddf2c8d665ec.js","/_next/static/chunks/d71fbb4ea529ba6c.js"],"default"]
+13:I[62968,["/_next/static/chunks/c7d1ddf2c8d665ec.js","/_next/static/chunks/d71fbb4ea529ba6c.js"],"default"]
+14:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/7340adf74ff47ec0.js"],"OutletBoundary"]
+15:"$Sreact.suspense"
+17:I[25205,["/_next/static/chunks/c7d1ddf2c8d665ec.js","/_next/static/chunks/d71fbb4ea529ba6c.js","/_next/static/chunks/54de262394fe2b89.js"],"default"]
+18:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/7340adf74ff47ec0.js"],"ViewportBoundary"]
+1a:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/7340adf74ff47ec0.js"],"MetadataBoundary"]
+4:["$","body",null,{"className":"outfit_8778cd42-module__wRojWG__variable antialiased font-sans","children":["$","$Lb",null,{"attribute":"class","defaultTheme":"system","enableSystem":true,"disableTransitionOnChange":true,"children":[["$","$Lc",null,{}],["$","$Ld",null,{}],["$","$Le",null,{}],["$","$Lf",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L10",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}],["$","$L11",null,{}],["$","$L12",null,{}],["$","$L13",null,{}]]}]}]
+5:["$","$1","c",{"children":[null,["$","$Lf",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L10",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+6:["$","$1","c",{"children":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":"$4:props:children:props:children:3:props:notFound:0:1:props:style","children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":"$4:props:children:props:children:3:props:notFound:0:1:props:children:props:children:1:props:style","children":404}],["$","div",null,{"style":"$4:props:children:props:children:3:props:notFound:0:1:props:children:props:children:2:props:style","children":["$","h2",null,{"style":"$4:props:children:props:children:3:props:notFound:0:1:props:children:props:children:2:props:children:props:style","children":"This page could not be found."}]}]]}]}]],null,["$","$L14",null,{"children":["$","$15",null,{"name":"Next.MetadataOutlet","children":"$@16"}]}]]}]
+7:["$","$L17","l",{}]
+8:["$","script","script-0",{"src":"/_next/static/chunks/54de262394fe2b89.js","async":true}]
+9:["$","$1","h",{"children":[["$","meta",null,{"name":"robots","content":"noindex"}],["$","$L18",null,{"children":"$L19"}],["$","div",null,{"hidden":true,"children":["$","$L1a",null,{"children":["$","$15",null,{"name":"Next.Metadata","children":"$L1b"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]
+19:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+1c:I[27201,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/7340adf74ff47ec0.js"],"IconMark"]
+16:null
+1b:[["$","title","0",{"children":"Plombier Annecy ⭐ #1 Urgence 24/7 | Water Plomberie Expert"}],["$","meta","1",{"name":"description","content":"🥇 PLOMBIER ANNECY #1 ⭐ Water Plomberie : LE plombier de référence à Annecy. Urgence 24/7, devis gratuit, intervention rapide. Plombier Annecy expert depuis 7 ans. Hamza DJAFFER."}],["$","meta","2",{"name":"author","content":"Hamza DJAFFER"}],["$","meta","3",{"name":"keywords","content":"plombier annecy, plombier annecy urgence, plombier annecy 24h, meilleur plombier annecy, plombier annecy pas cher, plombier annecy centre, plombier annecy le vieux, dépannage plomberie annecy, chauffagiste annecy, rénovation salle de bain annecy, plombier annecy avis, plombier annecy tarif, plombier annecy rapide, water plomberie annecy, hamza djaffer plombier annecy"}],["$","meta","4",{"name":"creator","content":"Water Plomberie"}],["$","meta","5",{"name":"publisher","content":"Water Plomberie"}],["$","meta","6",{"name":"robots","content":"index, follow"}],["$","meta","7",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","link","8",{"rel":"canonical","href":"https://www.waterplomberie.pro/"}],["$","meta","9",{"name":"google-site-verification","content":"your-google-verification-code"}],["$","meta","10",{"property":"og:title","content":"Plombier Annecy ⭐ #1 Urgence 24/7 | Water Plomberie Expert"}],["$","meta","11",{"property":"og:description","content":"🥇 PLOMBIER ANNECY #1 ⭐ Water Plomberie : LE plombier de référence à Annecy. Urgence 24/7, devis gratuit, intervention rapide. Expert depuis 7 ans."}],["$","meta","12",{"property":"og:url","content":"https://www.waterplomberie.pro/"}],["$","meta","13",{"property":"og:site_name","content":"Water Plomberie"}],["$","meta","14",{"property":"og:locale","content":"fr_FR"}],["$","meta","15",{"property":"og:image","content":"https://www.waterplomberie.pro/service2.jpg"}],["$","meta","16",{"property":"og:image:width","content":"1200"}],["$","meta","17",{"property":"og:image:height","content":"630"}],["$","meta","18",{"property":"og:image:alt","content":"Water Plomberie - Plombier professionnel Annecy"}],["$","meta","19",{"property":"og:type","content":"website"}],["$","meta","20",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","21",{"name":"twitter:site","content":"@waterplomberie"}],["$","meta","22",{"name":"twitter:title","content":"Plombier Annecy - Water Plomberie | Urgence 24/7"}],["$","meta","23",{"name":"twitter:description","content":"Plombier professionnel à Annecy : urgence 24/7, chauffage, sanitaire, rénovation. Devis gratuit."}],["$","meta","24",{"name":"twitter:image","content":"https://www.waterplomberie.pro/service2.jpg"}],["$","link","25",{"rel":"shortcut icon","href":"/logo.png"}],["$","link","26",{"rel":"icon","href":"/favicon.ico?favicon.0b3bf435.ico","sizes":"256x256","type":"image/x-icon"}],["$","link","27",{"rel":"icon","href":"/logo.png","sizes":"any"}],["$","link","28",{"rel":"icon","href":"/logo.png","sizes":"32x32","type":"image/png"}],["$","link","29",{"rel":"icon","href":"/logo.png","sizes":"16x16","type":"image/png"}],["$","link","30",{"rel":"apple-touch-icon","href":"/logo.png","sizes":"180x180","type":"image/png"}],["$","$L1c","31",{}]]

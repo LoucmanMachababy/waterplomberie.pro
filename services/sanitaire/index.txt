@@ -1,0 +1,137 @@
+1:"$Sreact.fragment"
+2:I[79520,["/_next/static/chunks/c7d1ddf2c8d665ec.js","/_next/static/chunks/d71fbb4ea529ba6c.js"],""]
+b:I[68027,[],"default"]
+:HL["/_next/static/chunks/4a9332a13ca6dc17.css","style"]
+:HL["/_next/static/media/1b99372b3eaef0c8-s.p.758e15a8.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+3:Tdda,
+            {
+              "@context": "https://schema.org",
+              "@type": "Plumber",
+              "name": "Water Plomberie",
+              "alternateName": "Water Plomberie Annecy",
+              "image": [
+                "https://www.waterplomberie.pro/logo.png",
+                "https://www.waterplomberie.pro/service2.jpg"
+              ],
+              "logo": "https://www.waterplomberie.pro/logo.png",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Annecy",
+                "addressRegion": "Haute-Savoie",
+                "postalCode": "74000",
+                "addressCountry": "FR"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": "45.8992",
+                "longitude": "6.1294"
+              },
+              "telephone": "+33 7 83 16 76 13",
+              "email": "watter.plomberie@gmail.com",
+              "url": "https://www.waterplomberie.pro/",
+              "areaServed": [
+                {
+                  "@type": "City",
+                  "name": "Annecy"
+                },
+                {
+                  "@type": "City",
+                  "name": "Thonon-les-Bains"
+                },
+                {
+                  "@type": "City",
+                  "name": "Annemasse"
+                },
+                {
+                  "@type": "City",
+                  "name": "Cluses"
+                },
+                {
+                  "@type": "City",
+                  "name": "Rumilly"
+                },
+                {
+                  "@type": "City",
+                  "name": "La Roche-sur-Foron"
+                }
+              ],
+              "description": "Plombier professionnel à Annecy et Haute-Savoie : urgence 24/7, chauffage, sanitaire, rénovation salle de bain. 7 ans d'expérience.",
+              "founder": {
+                "@type": "Person",
+                "name": "Hamza DJAFFER"
+              },
+              "openingHours": "Mo-Su 00:00-23:59",
+              "serviceType": [
+                "Plomberie d'urgence 24/7",
+                "Installation sanitaire",
+                "Réparation chauffage",
+                "Rénovation salle de bain",
+                "Dépannage plomberie"
+              ],
+              "priceRange": "€€",
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "5",
+                "reviewCount": "3"
+              },
+              "review": [
+                {
+                  "@type": "Review",
+                  "author": {
+                    "@type": "Person",
+                    "name": "Mohamed BEN AMAR"
+                  },
+                  "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5"
+                  },
+                  "reviewBody": "Hamza a été incroyablement réactif lors de mon problème de fuite. Un vrai professionnel !"
+                },
+                {
+                  "@type": "Review",
+                  "author": {
+                    "@type": "Person",
+                    "name": "Lucas DELACROIX"
+                  },
+                  "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5"
+                  },
+                  "reviewBody": "Je recommande Water Plomberie. Leur service d'urgence m'a permis de régler une panne de chauffage en plein hiver."
+                }
+              ]
+            }
+          0:{"P":null,"b":"WAxpuhKzh2ftfdBLR778m","c":["","services","sanitaire",""],"q":"","i":false,"f":[[["",{"children":["services",{"children":["sanitaire",{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/4a9332a13ca6dc17.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/_next/static/chunks/c7d1ddf2c8d665ec.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/_next/static/chunks/d71fbb4ea529ba6c.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"fr","children":[["$","head",null,{"children":["$","$L2",null,{"id":"schema-localbusiness","type":"application/ld+json","children":"$3"}]}],"$L4"]}]]}],{"children":["$L5",{"children":["$L6",{"children":["$L7",{},null,false,false]},null,false,false]},null,false,false]},["$L8",[],["$L9"]],false,false],"$La",false]],"m":"$undefined","G":["$b",[]],"S":true}
+c:I[59919,["/_next/static/chunks/c7d1ddf2c8d665ec.js","/_next/static/chunks/d71fbb4ea529ba6c.js"],"ThemeProvider"]
+d:I[90236,["/_next/static/chunks/c7d1ddf2c8d665ec.js","/_next/static/chunks/d71fbb4ea529ba6c.js"],"default"]
+e:I[86312,["/_next/static/chunks/c7d1ddf2c8d665ec.js","/_next/static/chunks/d71fbb4ea529ba6c.js"],"default"]
+f:I[2971,["/_next/static/chunks/c7d1ddf2c8d665ec.js","/_next/static/chunks/d71fbb4ea529ba6c.js"],"default"]
+10:I[39756,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/7340adf74ff47ec0.js"],"default"]
+11:I[37457,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/7340adf74ff47ec0.js"],"default"]
+12:I[19383,["/_next/static/chunks/c7d1ddf2c8d665ec.js","/_next/static/chunks/d71fbb4ea529ba6c.js"],"default"]
+13:I[40244,["/_next/static/chunks/c7d1ddf2c8d665ec.js","/_next/static/chunks/d71fbb4ea529ba6c.js"],"default"]
+14:I[62968,["/_next/static/chunks/c7d1ddf2c8d665ec.js","/_next/static/chunks/d71fbb4ea529ba6c.js"],"default"]
+1c:I[25205,["/_next/static/chunks/c7d1ddf2c8d665ec.js","/_next/static/chunks/d71fbb4ea529ba6c.js","/_next/static/chunks/54de262394fe2b89.js"],"default"]
+1d:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/7340adf74ff47ec0.js"],"ViewportBoundary"]
+1f:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/7340adf74ff47ec0.js"],"MetadataBoundary"]
+20:"$Sreact.suspense"
+4:["$","body",null,{"className":"outfit_8778cd42-module__wRojWG__variable antialiased font-sans","children":["$","$Lc",null,{"attribute":"class","defaultTheme":"system","enableSystem":true,"disableTransitionOnChange":true,"children":[["$","$Ld",null,{}],["$","$Le",null,{}],["$","$Lf",null,{}],["$","$L10",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L11",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}],["$","$L12",null,{}],["$","$L13",null,{}],["$","$L14",null,{}]]}]}]
+5:["$","$1","c",{"children":[null,["$","$L10",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L11",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+6:["$","$1","c",{"children":[null,["$","$L10",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L11",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+7:["$","$1","c",{"children":[["$","div",null,{"className":"min-h-screen bg-gradient-to-br from-blue-50 to-white py-16 px-4","children":["$","div",null,{"className":"max-w-6xl mx-auto","children":[["$","h1",null,{"className":"text-4xl font-bold text-center text-blue-800 mb-4","children":"Plomberie Sanitaire à Annecy - Rénovation & Installation"}],["$","p",null,{"className":"text-xl text-center text-gray-700 mb-12 max-w-3xl mx-auto","children":"Water Plomberie, votre expert en plomberie sanitaire à Annecy. Rénovation complète de salle de bain, installation WC, robinetterie et tous travaux sanitaires en Haute-Savoie."}],["$","div",null,{"className":"grid grid-cols-1 md:grid-cols-2 gap-8 mb-16","children":[["$","div",null,{"className":"bg-white rounded-2xl shadow-xl p-8","children":[["$","h2",null,{"className":"text-2xl font-bold text-blue-800 mb-6","children":"🚿 Rénovation Salle de Bain"}],["$","ul",null,{"className":"space-y-3 text-gray-700 mb-6","children":[["$","li",null,{"children":["✓ ",["$","strong",null,{"children":"Conception sur mesure"}]," - Étude personnalisée"]}],["$","li",null,{"children":["✓ ",["$","strong",null,{"children":"Douche à l'italienne"}]," - Installation complète"]}],["$","li",null,{"children":["✓ ",["$","strong",null,{"children":"Baignoire"}]," - Pose et raccordement"]}],["$","li",null,{"children":["✓ ",["$","strong",null,{"children":"Carrelage et faïence"}]," - Pose professionnelle"]}],["$","li",null,{"children":["✓ ",["$","strong",null,{"children":"Éclairage et ventilation"}]," - Installation électrique"]}],["$","li",null,{"children":["✓ ",["$","strong",null,{"children":"Meuble vasque"}]," - Pose et raccordement"]}]]}],["$","div",null,{"className":"bg-blue-100 p-4 rounded-lg","children":["$","p",null,{"className":"text-sm text-blue-800","children":[["$","strong",null,{"children":"Avant/Après :"}]," Découvrez nos réalisations de rénovation complète !"]}]}]]}],["$","div",null,{"className":"bg-white rounded-2xl shadow-xl p-8","children":[["$","h2",null,{"className":"text-2xl font-bold text-blue-800 mb-6","children":"🚽 Installation Sanitaire"}],["$","ul",null,{"className":"space-y-3 text-gray-700 mb-6","children":[["$","li",null,{"children":["✓ ",["$","strong",null,{"children":"WC et toilettes"}]," - Installation et remplacement"]}],["$","li",null,{"children":["✓ ",["$","strong",null,{"children":"Robinetterie"}]," - Mitigeurs, mélangeurs"]}],["$","li",null,{"children":["✓ ",["$","strong",null,{"children":"Lavabos et vasques"}]," - Pose et raccordement"]}],["$","li",null,{"children":["✓ ",["$","strong",null,{"children":"Éviers de cuisine"}]," - Installation complète"]}],["$","li",null,{"children":["✓ ",["$","strong",null,{"children":"Canalisations"}]," - Création et réparation"]}],["$","li",null,{"children":["✓ ",["$","strong",null,{"children":"Évacuations"}]," - Raccordement aux égouts"]}]]}],["$","div",null,{"className":"bg-green-100 p-4 rounded-lg","children":["$","p",null,{"className":"text-sm text-green-800","children":[["$","strong",null,{"children":"Garantie :"}]," 2 ans sur toutes nos installations sanitaires."]}]}]]}]]}],["$","div",null,{"className":"bg-gradient-to-r from-blue-100 to-cyan-50 rounded-2xl p-8 mb-16","children":[["$","h2",null,{"className":"text-3xl font-bold text-blue-800 mb-8 text-center","children":"Nos Réalisations à Annecy"}],["$","div",null,{"className":"grid grid-cols-1 md:grid-cols-3 gap-6","children":[["$","div",null,{"className":"bg-white rounded-lg p-6 shadow-lg","children":[["$","div",null,{"className":"text-blue-500 text-4xl mb-3 text-center","children":"🏠"}],["$","h3",null,{"className":"font-semibold text-blue-800 mb-2 text-center","children":"Rénovation Complète"}],["$","p",null,{"className":"text-sm text-gray-700 text-center","children":"Transformation totale d'une salle de bain de 8m² à Annecy-le-Vieux"}]]}],["$","div",null,{"className":"bg-white rounded-lg p-6 shadow-lg","children":[["$","div",null,{"className":"text-cyan-500 text-4xl mb-3 text-center","children":"✨"}],["$","h3",null,{"className":"font-semibold text-blue-800 mb-2 text-center","children":"Douche Italienne"}],["$","p",null,{"className":"text-sm text-gray-700 text-center","children":"Création d'une douche à l'italienne moderne à Seynod"}]]}],["$","div",null,{"className":"bg-white rounded-lg p-6 shadow-lg","children":["$L15","$L16","$L17"]}]]}]]}],"$L18","$L19","$L1a"]}]}],null,"$L1b"]}]
+8:["$","$L1c","l",{}]
+9:["$","script","script-0",{"src":"/_next/static/chunks/54de262394fe2b89.js","async":true}]
+a:["$","$1","h",{"children":[null,["$","$L1d",null,{"children":"$L1e"}],["$","div",null,{"hidden":true,"children":["$","$L1f",null,{"children":["$","$20",null,{"name":"Next.Metadata","children":"$L21"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]
+22:I[22016,["/_next/static/chunks/c7d1ddf2c8d665ec.js","/_next/static/chunks/d71fbb4ea529ba6c.js"],""]
+23:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/7340adf74ff47ec0.js"],"OutletBoundary"]
+15:["$","div",null,{"className":"text-purple-500 text-4xl mb-3 text-center","children":"🔧"}]
+16:["$","h3",null,{"className":"font-semibold text-blue-800 mb-2 text-center","children":"WC Suspendu"}]
+17:["$","p",null,{"className":"text-sm text-gray-700 text-center","children":"Installation de WC suspendus avec bâti-support à Cran-Gevrier"}]
+18:["$","div",null,{"className":"bg-white rounded-2xl shadow-xl p-8 mb-16","children":[["$","h2",null,{"className":"text-3xl font-bold text-blue-800 mb-8 text-center","children":"Les Étapes de Votre Rénovation"}],["$","div",null,{"className":"grid grid-cols-1 md:grid-cols-4 gap-6","children":[["$","div",null,{"className":"text-center","children":[["$","div",null,{"className":"bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4","children":["$","span",null,{"className":"text-2xl font-bold text-blue-600","children":"1"}]}],["$","h3",null,{"className":"font-semibold text-blue-800 mb-2","children":"Visite & Devis"}],["$","p",null,{"className":"text-sm text-gray-600","children":"Visite gratuite à domicile et devis détaillé sous 24h"}]]}],["$","div",null,{"className":"text-center","children":[["$","div",null,{"className":"bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4","children":["$","span",null,{"className":"text-2xl font-bold text-blue-600","children":"2"}]}],["$","h3",null,{"className":"font-semibold text-blue-800 mb-2","children":"Conception"}],["$","p",null,{"className":"text-sm text-gray-600","children":"Plans 3D et choix des matériaux selon vos goûts"}]]}],["$","div",null,{"className":"text-center","children":[["$","div",null,{"className":"bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4","children":["$","span",null,{"className":"text-2xl font-bold text-blue-600","children":"3"}]}],["$","h3",null,{"className":"font-semibold text-blue-800 mb-2","children":"Réalisation"}],["$","p",null,{"className":"text-sm text-gray-600","children":"Travaux réalisés par nos artisans qualifiés"}]]}],["$","div",null,{"className":"text-center","children":[["$","div",null,{"className":"bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4","children":["$","span",null,{"className":"text-2xl font-bold text-blue-600","children":"4"}]}],["$","h3",null,{"className":"font-semibold text-blue-800 mb-2","children":"Livraison"}],["$","p",null,{"className":"text-sm text-gray-600","children":"Réception des travaux et garantie 2 ans"}]]}]]}]]}]
+19:["$","div",null,{"className":"bg-white rounded-2xl shadow-xl p-8 mb-16","children":[["$","h2",null,{"className":"text-3xl font-bold text-blue-800 mb-8 text-center","children":"Tarifs Plomberie Sanitaire"}],["$","div",null,{"className":"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6","children":[["$","div",null,{"className":"border border-blue-200 rounded-lg p-6","children":[["$","h3",null,{"className":"font-semibold text-blue-800 mb-3","children":"Installation WC"}],["$","div",null,{"className":"text-2xl font-bold text-blue-600 mb-2","children":"À partir de 150€"}],["$","ul",null,{"className":"text-sm text-gray-600 space-y-1","children":[["$","li",null,{"children":"• Dépose ancien WC"}],["$","li",null,{"children":"• Pose nouveau WC"}],["$","li",null,{"children":"• Raccordement"}],["$","li",null,{"children":"• Test étanchéité"}]]}]]}],["$","div",null,{"className":"border border-blue-200 rounded-lg p-6","children":[["$","h3",null,{"className":"font-semibold text-blue-800 mb-3","children":"Robinetterie"}],["$","div",null,{"className":"text-2xl font-bold text-blue-600 mb-2","children":"À partir de 80€"}],["$","ul",null,{"className":"text-sm text-gray-600 space-y-1","children":[["$","li",null,{"children":"• Dépose ancienne"}],["$","li",null,{"children":"• Pose mitigeur"}],["$","li",null,{"children":"• Raccordement"}],["$","li",null,{"children":"• Réglages"}]]}]]}],["$","div",null,{"className":"border border-blue-200 rounded-lg p-6","children":[["$","h3",null,{"className":"font-semibold text-blue-800 mb-3","children":"Rénovation Complète"}],["$","div",null,{"className":"text-2xl font-bold text-blue-600 mb-2","children":"Sur devis"}],["$","ul",null,{"className":"text-sm text-gray-600 space-y-1","children":[["$","li",null,{"children":"• Étude personnalisée"}],["$","li",null,{"children":"• Devis détaillé"}],["$","li",null,{"children":"• Travaux clé en main"}],["$","li",null,{"children":"• Garantie 2 ans"}]]}]]}]]}]]}]
+1a:["$","div",null,{"className":"bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl p-8 text-center text-white","children":[["$","h2",null,{"className":"text-3xl font-bold mb-4","children":"Projet de rénovation sanitaire ?"}],["$","p",null,{"className":"text-xl mb-6","children":"Contactez Water Plomberie pour transformer votre salle de bain !"}],["$","div",null,{"className":"flex flex-col sm:flex-row gap-4 justify-center","children":[["$","a",null,{"href":"tel:+33783167613","className":"bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition","children":"📞 Appeler maintenant"}],["$","$L22",null,{"href":"/#contact","className":"bg-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition border-2 border-white","children":"💬 Devis gratuit"}]]}]]}]
+1b:["$","$L23",null,{"children":["$","$20",null,{"name":"Next.MetadataOutlet","children":"$@24"}]}]
+1e:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+25:I[27201,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/7340adf74ff47ec0.js"],"IconMark"]
+21:[["$","title","0",{"children":"Plomberie Sanitaire Annecy - Salle de Bain, WC, Robinetterie | Water Plomberie"}],["$","meta","1",{"name":"description","content":"Spécialiste plomberie sanitaire à Annecy : rénovation salle de bain, installation WC, robinetterie, douche italienne. Devis gratuit, intervention rapide Haute-Savoie."}],["$","meta","2",{"name":"author","content":"Hamza DJAFFER"}],["$","meta","3",{"name":"keywords","content":"plomberie sanitaire annecy, rénovation salle de bain annecy, installation wc, robinetterie annecy, douche italienne, plombier sanitaire haute-savoie"}],["$","meta","4",{"name":"creator","content":"Water Plomberie"}],["$","meta","5",{"name":"publisher","content":"Water Plomberie"}],["$","meta","6",{"name":"robots","content":"index, follow"}],["$","meta","7",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","link","8",{"rel":"canonical","href":"https://www.waterplomberie.pro/services/sanitaire/"}],["$","meta","9",{"name":"google-site-verification","content":"your-google-verification-code"}],["$","meta","10",{"property":"og:title","content":"Plombier Annecy ⭐ #1 Urgence 24/7 | Water Plomberie Expert"}],["$","meta","11",{"property":"og:description","content":"🥇 PLOMBIER ANNECY #1 ⭐ Water Plomberie : LE plombier de référence à Annecy. Urgence 24/7, devis gratuit, intervention rapide. Expert depuis 7 ans."}],["$","meta","12",{"property":"og:url","content":"https://www.waterplomberie.pro/"}],["$","meta","13",{"property":"og:site_name","content":"Water Plomberie"}],["$","meta","14",{"property":"og:locale","content":"fr_FR"}],["$","meta","15",{"property":"og:image","content":"https://www.waterplomberie.pro/service2.jpg"}],["$","meta","16",{"property":"og:image:width","content":"1200"}],["$","meta","17",{"property":"og:image:height","content":"630"}],["$","meta","18",{"property":"og:image:alt","content":"Water Plomberie - Plombier professionnel Annecy"}],["$","meta","19",{"property":"og:type","content":"website"}],["$","meta","20",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","21",{"name":"twitter:site","content":"@waterplomberie"}],["$","meta","22",{"name":"twitter:title","content":"Plombier Annecy - Water Plomberie | Urgence 24/7"}],["$","meta","23",{"name":"twitter:description","content":"Plombier professionnel à Annecy : urgence 24/7, chauffage, sanitaire, rénovation. Devis gratuit."}],["$","meta","24",{"name":"twitter:image","content":"https://www.waterplomberie.pro/service2.jpg"}],["$","link","25",{"rel":"shortcut icon","href":"/logo.png"}],["$","link","26",{"rel":"icon","href":"/favicon.ico?favicon.0b3bf435.ico","sizes":"256x256","type":"image/x-icon"}],["$","link","27",{"rel":"icon","href":"/logo.png","sizes":"any"}],["$","link","28",{"rel":"icon","href":"/logo.png","sizes":"32x32","type":"image/png"}],["$","link","29",{"rel":"icon","href":"/logo.png","sizes":"16x16","type":"image/png"}],["$","link","30",{"rel":"apple-touch-icon","href":"/logo.png","sizes":"180x180","type":"image/png"}],["$","$L25","31",{}]]
+24:null

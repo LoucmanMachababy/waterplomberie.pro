@@ -1,0 +1,24 @@
+# Robots.txt optimisé pour Water Plomberie - Plombier Annecy
+User-agent: *
+Allow: /
+Allow: /plombier-annecy
+Allow: /plombier-thonon
+Allow: /plombier-annemasse
+Allow: /services
+Allow: /services/chauffage
+Allow: /services/sanitaire
+Allow: /faq
+
+# Priorité pour les pages importantes
+Crawl-delay: 1
+
+# Host
+Host: https://www.waterplomberie.pro
+
+# Sitemaps
+Sitemap: https://www.waterplomberie.pro/sitemap.xml
+
+# Pages importantes pour le SEO local Annecy
+# /plombier-annecy - Page principale pour "plombier annecy"
+# /services - Services complets plombier Annecy
+# / - Page d'accueil optimisée plombier Annecy
